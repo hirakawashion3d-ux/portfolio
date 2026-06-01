@@ -4,17 +4,10 @@ let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cdot.style.left=mx+'px';cdot.style.top=my+'px';});
 (function ar(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cring.style.left=rx+'px';cring.style.top=ry+'px';requestAnimationFrame(ar);})();
 
-// LOADER IMAGE SYNC — share same src as nav tile (Section 20)
-(function(){
-  const navImg = document.getElementById('nav-tile-characters-img');
-  const loaderImg = document.getElementById('loader-img-characters');
-  if(navImg && loaderImg && navImg.src) loaderImg.src = navImg.src;
-})();
-
 // LOADER
 window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('done'),1400));
 
-// SCROLL
+// SCROLL PROGRESS
 window.addEventListener('scroll',()=>{
   document.getElementById('spfill').style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
 },{passive:true});

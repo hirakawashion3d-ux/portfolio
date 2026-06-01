@@ -8,22 +8,11 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════
-  HERO IMAGE REPLACEMENT GUIDE
-  Current: 2b_hero_reference_01.png (temporary AI reference)
-  To replace with UE5 final render:
-    1. Export from UE5 as JPG/PNG
-    2. Rename to: 2b_hero_final.jpg (or keep same filename)
-    3. Replace src in: <img id="hero-main-img" src="...">
-    4. Remove placeholder label div below the img tag
-  Maintain: silence / negative space / partial light / restrained framing
-═══════════════════════════════════════════ -->
 <div class="c-dot" id="cdot"></div>
 <div class="c-ring" id="cring"></div>
 <div class="sp"><div class="sp-fill" id="spfill"></div></div>
 
 <div class="loader" id="loader">
-  <!-- Background: diagonal thumbnail tiles — same language as Home nav -->
   <div class="loader-bg">
     <div class="loader-bg-tile" id="loader-tile-characters">
       <img id="loader-img-characters" src="images/2b/hero_2b.jpg" alt="">
@@ -32,9 +21,7 @@
     <div class="loader-bg-tile ph"></div>
     <div class="loader-bg-tile ph"></div>
   </div>
-  <!-- Dark overlay -->
   <div class="loader-overlay"></div>
-  <!-- Foreground: name + bar -->
   <div class="loader-fg">
     <div class="ld-name">Hirakawa</div>
     <div class="ld-bar-bg"><div class="ld-bar"></div></div>
@@ -51,12 +38,10 @@
   </div>
 </div>
 
-<!-- NAV -->
 <nav class="top-nav" id="topNav">
   <div class="nav-logo" id="logoHome">Hirakawa Shion</div>
 </nav>
 
-<!-- H-TABS: Home / Characters / Work / Research / About -->
 <div class="h-tabs">
   <div class="h-tab active" data-page="home">Home</div>
   <div class="h-tab" data-page="characters">Characters</div>
@@ -69,17 +54,13 @@
 <div class="layout">
 <div class="main" id="main">
 
-<!-- ═══ HOME ═══ -->
+<!-- HOME -->
 <div class="page active" id="page-home">
-
-  <!-- Hero Text -->
   <div class="home-hero">
     <div class="home-bg"></div>
     <div class="h-eyebrow">Character Artist · LookDev · Pipeline</div>
     <div class="h-title">Hirakawa<br><em>Shion</em></div>
     <div class="h-desc">Character Artist — Tokyo, Japan</div>
-
-    <!-- Experience Mini — compact flow only -->
     <div class="h-exp-mini">
       <span class="h-exp-mini-lbl">Experience</span>
       <div class="h-exp-mini-flow">
@@ -90,24 +71,16 @@
         <span class="h-exp-mini-co">SpaceData</span>
       </div>
     </div>
-
     <div class="h-cta">
       <div class="btn btn-p" data-nav="characters">Characters を見る</div>
       <div class="btn btn-o" data-nav="about">About</div>
     </div>
   </div>
 
-  <!-- Visual Navigation Tiles — Section 19 -->
   <div class="nav-tiles rv">
-
-    <!-- 01 Characters — primary, largest -->
     <div class="nav-tile primary" data-nav="characters">
-      <!-- HERO IMAGE: replace with 2B hero crop when ready -->
       <div class="iw" style="height:100%;min-height:220px;">
-        <img id="nav-tile-characters-img"
-             src="images/2b/hero_2b.jpg"
-             alt="Characters"
-             style="object-position:center top;filter:brightness(.65);">
+        <img src="images/2b/hero_2b.jpg" alt="Characters" style="object-position:center top;filter:brightness(.65);">
       </div>
       <div class="nav-tile-overlay"></div>
       <div class="nav-tile-info">
@@ -116,10 +89,10 @@
       </div>
       <div class="nav-tile-arrow">↗</div>
     </div>
-
-    <!-- 02 Work -->
     <div class="nav-tile" data-nav="work">
-      <div class="iw" style="height:100%;min-height:220px;"><img src="images/work/work_thumb.jpg" alt="Work" style="width:100%;height:100%;object-fit:cover;filter:brightness(.6);"></div>
+      <div class="iw" style="height:100%;min-height:220px;">
+        <img src="images/work/work_thumb.jpg" alt="Work" style="width:100%;height:100%;object-fit:cover;filter:brightness(.6);">
+      </div>
       <div class="nav-tile-overlay"></div>
       <div class="nav-tile-info">
         <div class="nav-tile-label">Work</div>
@@ -127,10 +100,10 @@
       </div>
       <div class="nav-tile-arrow">↗</div>
     </div>
-
-    <!-- 03 Research -->
     <div class="nav-tile" data-nav="research">
-      <div class="iw" style="height:100%;min-height:220px;"><img src="images/research/research_thumb.jpg" alt="Research" style="width:100%;height:100%;object-fit:cover;filter:brightness(.6);"></div>
+      <div class="iw" style="height:100%;min-height:220px;">
+        <img src="images/research/research_thumb.jpg" alt="Research" style="width:100%;height:100%;object-fit:cover;filter:brightness(.6);">
+      </div>
       <div class="nav-tile-overlay"></div>
       <div class="nav-tile-info">
         <div class="nav-tile-label">Research</div>
@@ -138,10 +111,10 @@
       </div>
       <div class="nav-tile-arrow">↗</div>
     </div>
-
-    <!-- 04 About -->
     <div class="nav-tile" data-nav="about">
-      <div class="iw" style="height:100%;min-height:220px;"><img src="images/about/portrait_profile.jpg" alt="About" style="width:100%;height:100%;object-fit:cover;filter:brightness(.6);"></div>
+      <div class="iw" style="height:100%;min-height:220px;">
+        <img src="images/about/portrait_profile.jpg" alt="About" style="width:100%;height:100%;object-fit:cover;filter:brightness(.6);">
+      </div>
       <div class="nav-tile-overlay"></div>
       <div class="nav-tile-info">
         <div class="nav-tile-label">About</div>
@@ -149,10 +122,8 @@
       </div>
       <div class="nav-tile-arrow">↗</div>
     </div>
-
   </div>
 
-  <!-- Toolset Strip — compact, supplementary -->
   <div class="home-tools-strip rv d1">
     <div class="hts-group">
       <span class="hts-lbl">Software</span>
@@ -184,10 +155,9 @@
   </div>
 </div>
 
-<!-- ═══ CHARACTERS ═══ -->
+<!-- CHARACTERS -->
 <div class="page" id="page-characters">
 
-  <!-- 01 Hero -->
   <div class="sh"><span class="sn">01</span><span class="st">Hero</span><span class="sl"></span><span class="sd">個人制作 · ファンアート · 3D</span></div>
   <div class="char-hero-grid">
     <div class="char-left">
@@ -202,91 +172,82 @@
       <div class="study-b">Personal Study · Fan Art · Not for commercial use</div>
     </div>
     <div class="char-right">
-      <!-- HERO IMAGE: replace src with UE5 final render when ready -->
-      <!-- current: temporary reference image (AI render, not final artwork) -->
       <div class="char-hero-img" id="hero-main-wrap">
-        <div class="iw lb-t" data-cap="2B — Hero Shot (Placeholder)" data-group="hero" style="height:100%">
-          <img id="hero-main-img"
-               src="images/2b/hero_2b.jpg"
-               alt="2B — Hero Shot placeholder"
-               style="object-position:center top;">
+        <div class="iw lb-t" data-cap="2B — Hero Shot" data-group="hero" style="height:100%">
+          <img id="hero-main-img" src="images/2b/hero_2b.jpg" alt="2B Hero" style="object-position:center top;">
           <div class="ov"></div>
-          <div style="position:absolute;bottom:10px;left:12px;font-size:6px;letter-spacing:.15em;color:rgba(255,255,255,.25);text-transform:uppercase;pointer-events:none;">Placeholder — replace with UE5 render</div>
         </div>
       </div>
       <div class="char-thumbs">
-        <div class="ct active"><div class="iw" style="height:100%"><img src="images/2b/hero_2b.jpg" alt="Face" style="width:100%;height:100%;object-fit:cover;"></div><span class="ct-lbl">Face</span></div>
-        <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/hero_34.jpg" alt="3/4" style="width:100%;height:100%;object-fit:cover;"></div><span class="ct-lbl">3/4</span></div>
-        <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/wireframe_full.jpg" alt="Wire" style="width:100%;height:100%;object-fit:cover;"></div><span class="ct-lbl">Wire</span></div>
-        <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/tex_albedo.jpg" alt="Tex" style="width:100%;height:100%;object-fit:cover;"></div><span class="ct-lbl">Tex</span></div>
+        <div class="ct active"><div class="iw" style="height:100%"><img src="images/2b/hero_2b.jpg" alt="Face"></div><span class="ct-lbl">Face</span></div>
+        <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/hero_34.jpg" alt="3/4"></div><span class="ct-lbl">3/4</span></div>
+        <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/wireframe_full.jpg" alt="Wire"></div><span class="ct-lbl">Wire</span></div>
+        <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/tex_albedo.jpg" alt="Tex"></div><span class="ct-lbl">Tex</span></div>
       </div>
     </div>
   </div>
 
-  <!-- 02 制作工程 -->
   <div class="sh"><span class="sn">02</span><span class="st">制作工程</span><span class="sl"></span><span class="sd">リファレンス収集 → 最終仕上げ</span></div>
   <div class="proc-hd"><div class="proc-ttl">制作プロセス</div></div>
   <div class="proc-grid rv">
     <div class="proc-step"><div class="ps-num">01</div><div class="ps-ttl">リファレンス収集</div><div class="ps-desc">公式アートワーク・スクリーンショットを収集。シルエットとプロポーションの目標値を設定。</div></div>
     <div class="proc-step"><div class="ps-num">02</div><div class="ps-ttl">ベースメッシュ</div><div class="ps-desc">ZBrushで球体からブロックアウト。一次形状とマスの分布を確立。</div></div>
     <div class="proc-step"><div class="ps-num">03</div><div class="ps-ttl">ハイポリスカルプト</div><div class="ps-desc">ZBrushで数百万ポリゴン。肌のポア・布の織り目・ハードサーフェスを高解像度でスカルプト。</div></div>
-    <div class="proc-step"><div class="ps-num">04</div><div class="ps-ttl">リトポロジー</div><div class="ps-desc">ZRemesher + Mayaで手動クリーンアップ。アニメーション変形に最適化した全クワッドのエッジフロー。</div></div>
+    <div class="proc-step"><div class="ps-num">04</div><div class="ps-ttl">リトポロジー</div><div class="ps-desc">ZRemesher + Mayaで手動クリーンアップ。アニメーション変形に最適化したエッジフロー。</div></div>
     <div class="proc-step"><div class="ps-num">05</div><div class="ps-ttl">UV展開 · ベイク</div><div class="ps-desc">Mayaでモジュラーなシームカット設計。AO・ノーマル・カーブチャー・厚みの各パスをベイク。</div></div>
     <div class="proc-step"><div class="ps-num">06</div><div class="ps-ttl">テクスチャ · LookDev</div><div class="ps-desc">Substance PainterでPBRテクスチャリング。Photoshopで仕上げ調整。UE5でLookDev・検証。</div></div>
   </div>
   <div class="proc-gal rv d1">
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Reference" data-group="proc"><img src="images/2b/proc_reference.jpg" alt="Reference" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="pg-lbl">Reference</div></div>
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Blockout" data-group="proc"><img src="images/2b/proc_blockout.jpg" alt="Blockout" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="pg-lbl">Blockout</div></div>
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Mid Sculpt" data-group="proc"><img src="images/2b/proc_midsculpt.jpg" alt="Mid Sculpt" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="pg-lbl">Mid Sculpt</div></div>
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="High Poly" data-group="proc"><img src="images/2b/proc_highpoly.jpg" alt="High Poly" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="pg-lbl">High Poly</div></div>
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Retopology" data-group="proc"><img src="images/2b/proc_retopology.jpg" alt="Retopology" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="pg-lbl">Retopology</div></div>
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Textured" data-group="proc"><img src="images/2b/proc_textured.jpg" alt="Textured" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="pg-lbl">Textured</div></div>
+    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Reference" data-group="proc"><img src="images/2b/proc_reference.jpg" alt="Reference"><div class="ov"></div></div><div class="pg-lbl">Reference</div></div>
+    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Blockout" data-group="proc"><img src="images/2b/proc_blockout.jpg" alt="Blockout"><div class="ov"></div></div><div class="pg-lbl">Blockout</div></div>
+    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Mid Sculpt" data-group="proc"><img src="images/2b/proc_midsculpt.jpg" alt="Mid Sculpt"><div class="ov"></div></div><div class="pg-lbl">Mid Sculpt</div></div>
+    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="High Poly" data-group="proc"><img src="images/2b/proc_highpoly.jpg" alt="High Poly"><div class="ov"></div></div><div class="pg-lbl">High Poly</div></div>
+    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Retopology" data-group="proc"><img src="images/2b/proc_retopology.jpg" alt="Retopology"><div class="ov"></div></div><div class="pg-lbl">Retopology</div></div>
+    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Textured" data-group="proc"><img src="images/2b/proc_textured.jpg" alt="Textured"><div class="ov"></div></div><div class="pg-lbl">Textured</div></div>
   </div>
   <div class="proc-tools">
     <span class="sw-lbl">使用ツール</span>
     <span class="sw-tag">ZBrush</span><span class="sw-tag">Maya</span><span class="sw-tag">Substance 3D Painter</span><span class="sw-tag">Photoshop</span><span class="sw-tag">Unreal Engine 5</span>
   </div>
 
-  <!-- 03 Beauty -->
   <div class="sh"><span class="sn">03</span><span class="st">Final Render</span><span class="sl"></span><span class="sd">シネマティックレンダー · ライティング</span></div>
   <div class="beauty rv">
     <div class="b-main">
-      <div class="iw lb-t" style="height:100%;min-height:460px" data-cap="Beauty Main" data-group="beauty"><img src="images/2b/beauty_main.jpg" alt="beauty_main.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div>
+      <div class="iw lb-t" style="height:100%;min-height:460px" data-cap="Beauty Main" data-group="beauty">
+        <img src="images/2b/beauty_main.jpg" alt="Beauty Main">
+        <div class="ov"></div>
+      </div>
       <div class="b-cap">Beauty Main · Cinematic Lighting</div>
     </div>
     <div class="b-sub">
-      <div class="b-sub-img"><div class="iw lb-t" data-cap="Alt 01" data-group="beauty"><img src="images/2b/beauty_alt01.jpg" alt="Alt 01" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div></div>
-      <div class="b-sub-img"><div class="iw lb-t" data-cap="Alt 02" data-group="beauty"><img src="images/2b/beauty_alt02.jpg" alt="Alt 02" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div></div>
+      <div class="b-sub-img"><div class="iw lb-t" data-cap="Alt 01" data-group="beauty"><img src="images/2b/beauty_alt01.jpg" alt="Alt 01"><div class="ov"></div></div></div>
+      <div class="b-sub-img"><div class="iw lb-t" data-cap="Alt 02" data-group="beauty"><img src="images/2b/beauty_alt02.jpg" alt="Alt 02"><div class="ov"></div></div></div>
     </div>
     <div class="b-info">
-      <div class="stag">03 — Beauty</div>
+      <div class="stag">03 — Final Render</div>
       <div class="b-ttl">Final<br>Render</div>
       <div class="b-desc">シネマティックライティングとサーフェスクオリティを探求した個人習作。</div>
       <div class="tag-r"><span class="tag">HDRI Lit</span><span class="tag">PBR</span><span class="tag">UE5</span></div>
     </div>
   </div>
 
-  <!-- 04 Face -->
   <div class="sh"><span class="sn">04</span><span class="st">Face</span><span class="sl"></span><span class="sd">クローズアップ · Eye Detail · スキン · ヘア</span></div>
-  <!-- Row 1: Large face + Eye Detail as hero -->
   <div class="face-row1 rv">
     <div class="face-main">
-      <div class="iw lb-t" data-cap="Face Front" data-group="face"><img src="images/2b/face_front.jpg" alt="face_front.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div>
+      <div class="iw lb-t" data-cap="Face Front" data-group="face"><img src="images/2b/face_front.jpg" alt="Face Front"><div class="ov"></div></div>
       <div class="face-hl"><span class="stag">Face · Close-up</span></div>
     </div>
     <div class="face-eye-hero">
-      <div class="iw lb-t" data-cap="Eye Detail" data-group="face"><img src="images/2b/eye_detail.jpg" alt="eye_detail.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div>
+      <div class="iw lb-t" data-cap="Eye Detail" data-group="face"><img src="images/2b/eye_detail.jpg" alt="Eye Detail"><div class="ov"></div></div>
       <div class="face-eye-lbl">Eye Detail</div>
     </div>
   </div>
-  <!-- Row 2: Skin / Eyelash / Profile / 3/4 details -->
   <div class="face-row2 rv">
-    <div class="face-det2"><div class="iw lb-t" data-cap="Skin Pores" data-group="face"><img src="images/2b/face_skin_pores.jpg" alt="Skin Pores" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="face-det-lbl">Skin Pores</div></div>
-    <div class="face-det2"><div class="iw lb-t" data-cap="Subsurface" data-group="face"><img src="images/2b/face_subsurface.jpg" alt="Subsurface" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="face-det-lbl">Subsurface</div></div>
-    <div class="face-det2"><div class="iw lb-t" data-cap="Hair Strands" data-group="face"><img src="images/2b/face_hair_strands.jpg" alt="Hair Strands" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="face-det-lbl">Hair Strands</div></div>
-    <div class="face-det2"><div class="iw lb-t" data-cap="Profile" data-group="face"><img src="images/2b/face_profile.jpg" alt="Profile" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="face-det-lbl">Profile</div></div>
+    <div class="face-det2"><div class="iw lb-t" data-cap="Skin Pores" data-group="face"><img src="images/2b/face_skin_pores.jpg" alt="Skin Pores"><div class="ov"></div></div><div class="face-det-lbl">Skin Pores</div></div>
+    <div class="face-det2"><div class="iw lb-t" data-cap="Subsurface" data-group="face"><img src="images/2b/face_subsurface.jpg" alt="Subsurface"><div class="ov"></div></div><div class="face-det-lbl">Subsurface</div></div>
+    <div class="face-det2"><div class="iw lb-t" data-cap="Hair Strands" data-group="face"><img src="images/2b/face_hair_strands.jpg" alt="Hair Strands"><div class="ov"></div></div><div class="face-det-lbl">Hair Strands</div></div>
+    <div class="face-det2"><div class="iw lb-t" data-cap="Profile" data-group="face"><img src="images/2b/face_profile.jpg" alt="Profile"><div class="ov"></div></div><div class="face-det-lbl">Profile</div></div>
   </div>
-  <!-- Stat bar — 2 column, readable -->
   <div class="face-stat">
     <div class="fs-item"><span class="fs-v">8,200</span><span class="fs-k">顔面ポリゴン数</span></div>
     <div class="fs-item"><span class="fs-v">4K</span><span class="fs-k">Skin Map</span></div>
@@ -294,12 +255,11 @@
     <div class="fs-item"><span class="fs-v">32-bit</span><span class="fs-k">Normal Depth</span></div>
   </div>
 
-  <!-- 05 Full Body -->
   <div class="sh"><span class="sn">05</span><span class="st">Full Body</span><span class="sl"></span><span class="sd">360° · シルエット · サーフェス</span></div>
   <div class="fullbody rv">
-    <div class="fb-view"><div class="iw lb-t" style="height:100%" data-cap="Full Body Front" data-group="fb"><img src="images/2b/fullbody_front.jpg" alt="fullbody_front.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="angle-lbl">FRONT</div></div>
-    <div class="fb-view"><div class="iw lb-t" style="height:100%" data-cap="Full Body Side" data-group="fb"><img src="images/2b/fullbody_side.jpg" alt="fullbody_side.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="angle-lbl">SIDE</div></div>
-    <div class="fb-view"><div class="iw lb-t" style="height:100%" data-cap="Full Body Back" data-group="fb"><img src="images/2b/fullbody_back.jpg" alt="fullbody_back.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="angle-lbl">BACK</div></div>
+    <div class="fb-view"><div class="iw lb-t" style="height:100%" data-cap="Full Body Front" data-group="fb"><img src="images/2b/fullbody_front.jpg" alt="Front"><div class="ov"></div></div><div class="angle-lbl">FRONT</div></div>
+    <div class="fb-view"><div class="iw lb-t" style="height:100%" data-cap="Full Body Side" data-group="fb"><img src="images/2b/fullbody_side.jpg" alt="Side"><div class="ov"></div></div><div class="angle-lbl">SIDE</div></div>
+    <div class="fb-view"><div class="iw lb-t" style="height:100%" data-cap="Full Body Back" data-group="fb"><img src="images/2b/fullbody_back.jpg" alt="Back"><div class="ov"></div></div><div class="angle-lbl">BACK</div></div>
     <div class="fb-side">
       <div class="stag">05 — Full Body</div>
       <h3>全身<br>ビュー</h3>
@@ -310,12 +270,11 @@
     </div>
   </div>
 
-  <!-- 06 Wireframe -->
   <div class="sh"><span class="sn">06</span><span class="st">Wireframe</span><span class="sl"></span><span class="sd">トポロジー · エッジフロー</span></div>
   <div class="wire-sec rv">
     <div class="wf-left">
-      <div class="wf-cell"><div class="iw lb-t" style="height:100%;min-height:260px" data-cap="Full Wireframe" data-group="wire"><img src="images/2b/wireframe_full.jpg" alt="wireframe_full.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="wf-lbl">Full Wireframe</div></div>
-      <div class="wf-cell"><div class="iw lb-t" style="height:100%;min-height:260px" data-cap="Face Topology" data-group="wire"><img src="images/2b/wireframe_face.jpg" alt="wireframe_face.jpg" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="wf-lbl">Face Topology</div></div>
+      <div class="wf-cell"><div class="iw lb-t" style="height:100%;min-height:260px" data-cap="Full Wireframe" data-group="wire"><img src="images/2b/wireframe_full.jpg" alt="Wireframe Full"><div class="ov"></div></div><div class="wf-lbl">Full Wireframe</div></div>
+      <div class="wf-cell"><div class="iw lb-t" style="height:100%;min-height:260px" data-cap="Face Topology" data-group="wire"><img src="images/2b/wireframe_face.jpg" alt="Face Topology"><div class="ov"></div></div><div class="wf-lbl">Face Topology</div></div>
     </div>
     <div class="wf-right">
       <div class="stag">06 — Wireframe</div>
@@ -325,14 +284,13 @@
     </div>
   </div>
 
-  <!-- 07 Texture -->
   <div class="sh"><span class="sn">07</span><span class="st">Texture</span><span class="sl"></span><span class="sd">PBR マップ · チャンネル構成 · カラーマネジメント</span></div>
   <div class="tex-sec rv">
     <div class="tex-left">
-      <div class="tex-tile"><div class="iw lb-t" data-cap="Albedo" data-group="tex"><img src="images/2b/tex_albedo.jpg" alt="Albedo" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="tile-lbl">Albedo</div></div>
-      <div class="tex-tile"><div class="iw lb-t" data-cap="Normal" data-group="tex"><img src="images/2b/tex_normal.jpg" alt="Normal" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="tile-lbl">Normal</div></div>
-      <div class="tex-tile"><div class="iw lb-t" data-cap="Roughness" data-group="tex"><img src="images/2b/tex_roughness.jpg" alt="Roughness" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="tile-lbl">Roughness</div></div>
-      <div class="tex-tile"><div class="iw lb-t" data-cap="Metallic" data-group="tex"><img src="images/2b/tex_metallic.jpg" alt="Metallic" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div><div class="tile-lbl">Metallic</div></div>
+      <div class="tex-tile"><div class="iw lb-t" data-cap="Albedo" data-group="tex"><img src="images/2b/tex_albedo.jpg" alt="Albedo"><div class="ov"></div></div><div class="tile-lbl">Albedo</div></div>
+      <div class="tex-tile"><div class="iw lb-t" data-cap="Normal" data-group="tex"><img src="images/2b/tex_normal.jpg" alt="Normal"><div class="ov"></div></div><div class="tile-lbl">Normal</div></div>
+      <div class="tex-tile"><div class="iw lb-t" data-cap="Roughness" data-group="tex"><img src="images/2b/tex_roughness.jpg" alt="Roughness"><div class="ov"></div></div><div class="tile-lbl">Roughness</div></div>
+      <div class="tex-tile"><div class="iw lb-t" data-cap="Metallic" data-group="tex"><img src="images/2b/tex_metallic.jpg" alt="Metallic"><div class="ov"></div></div><div class="tile-lbl">Metallic</div></div>
     </div>
     <div class="tex-right">
       <div class="stag">07 — Texture</div>
@@ -344,33 +302,32 @@
     </div>
     <div class="ch-strip-lbl">Channel Maps</div>
     <div class="tex-channels">
-      <div class="ch-item"><div class="iw lb-t" data-cap="AO" data-group="ch"><img src="images/2b/tex_ao.jpg" alt="AO" style="width:100%;height:100%;object-fit:cover;"></div><div class="ch-lbl">AO</div></div>
-      <div class="ch-item"><div class="iw lb-t" data-cap="SSS" data-group="ch"><img src="images/2b/tex_sss.jpg" alt="SSS" style="width:100%;height:100%;object-fit:cover;"></div><div class="ch-lbl">SSS</div></div>
-      <div class="ch-item"><div class="iw lb-t" data-cap="Emission" data-group="ch"><img src="images/2b/tex_emission.jpg" alt="Emit" style="width:100%;height:100%;object-fit:cover;"></div><div class="ch-lbl">Emission</div></div>
-      <div class="ch-item"><div class="iw lb-t" data-cap="Opacity" data-group="ch"><img src="images/2b/tex_opacity.jpg" alt="Opac" style="width:100%;height:100%;object-fit:cover;"></div><div class="ch-lbl">Opacity</div></div>
-      <div class="ch-item"><div class="iw lb-t" data-cap="Height" data-group="ch"><img src="images/2b/tex_height.jpg" alt="Height" style="width:100%;height:100%;object-fit:cover;"></div><div class="ch-lbl">Height</div></div>
-      <div class="ch-item"><div class="iw lb-t" data-cap="UV Layout" data-group="ch"><img src="images/2b/tex_uv.jpg" alt="UV" style="width:100%;height:100%;object-fit:cover;"></div><div class="ch-lbl">UV Map</div></div>
+      <div class="ch-item"><div class="iw lb-t" data-cap="AO" data-group="ch"><img src="images/2b/tex_ao.jpg" alt="AO"></div><div class="ch-lbl">AO</div></div>
+      <div class="ch-item"><div class="iw lb-t" data-cap="SSS" data-group="ch"><img src="images/2b/tex_sss.jpg" alt="SSS"></div><div class="ch-lbl">SSS</div></div>
+      <div class="ch-item"><div class="iw lb-t" data-cap="Emission" data-group="ch"><img src="images/2b/tex_emission.jpg" alt="Emission"></div><div class="ch-lbl">Emission</div></div>
+      <div class="ch-item"><div class="iw lb-t" data-cap="Opacity" data-group="ch"><img src="images/2b/tex_opacity.jpg" alt="Opacity"></div><div class="ch-lbl">Opacity</div></div>
+      <div class="ch-item"><div class="iw lb-t" data-cap="Height" data-group="ch"><img src="images/2b/tex_height.jpg" alt="Height"></div><div class="ch-lbl">Height</div></div>
+      <div class="ch-item"><div class="iw lb-t" data-cap="UV Layout" data-group="ch"><img src="images/2b/tex_uv.jpg" alt="UV"></div><div class="ch-lbl">UV Map</div></div>
     </div>
   </div>
 
-  <!-- 08 LookDev -->
   <div class="sh"><span class="sn">08</span><span class="st">LookDev</span><span class="sl"></span><span class="sd">ライティング検証 · マテリアルレスポンス</span></div>
   <div class="lookdev rv">
-    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Studio Neutral" data-group="ld"><img src="images/2b/ld_studio.jpg" alt="Studio Neutral" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#b89a5a"></span>Studio Neutral</span><span class="ld-sub-t">3-point · Soft box</span></div></div>
-    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Backlight" data-group="ld"><img src="images/2b/ld_backlight.jpg" alt="Backlight" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#4a6080"></span>Backlight</span><span class="ld-sub-t">Rim · Silhouette</span></div></div>
-    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Outdoor HDRI" data-group="ld"><img src="images/2b/ld_outdoor.jpg" alt="Outdoor HDRI" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#6a8060"></span>Outdoor HDRI</span><span class="ld-sub-t">Natural · Overcast</span></div></div>
-    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Game Engine UE5" data-group="ld"><img src="images/2b/ld_ue5.jpg" alt="Game Engine" style="width:100%;height:100%;object-fit:cover;"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#703060"></span>Game Engine</span><span class="ld-sub-t">UE5 · Lumen</span></div></div>
+    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Studio Neutral" data-group="ld"><img src="images/2b/ld_studio.jpg" alt="Studio Neutral"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#b89a5a"></span>Studio Neutral</span><span class="ld-sub-t">3-point · Soft box</span></div></div>
+    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Backlight" data-group="ld"><img src="images/2b/ld_backlight.jpg" alt="Backlight"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#4a6080"></span>Backlight</span><span class="ld-sub-t">Rim · Silhouette</span></div></div>
+    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Outdoor HDRI" data-group="ld"><img src="images/2b/ld_outdoor.jpg" alt="Outdoor HDRI"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#6a8060"></span>Outdoor HDRI</span><span class="ld-sub-t">Natural · Overcast</span></div></div>
+    <div class="ld-cell"><div class="ld-img"><div class="iw lb-t" style="height:100%" data-cap="Game Engine UE5" data-group="ld"><img src="images/2b/ld_ue5.jpg" alt="Game Engine"><div class="ov"></div></div></div><div class="ld-foot"><span class="ld-name"><span class="ld-dot" style="background:#703060"></span>Game Engine</span><span class="ld-sub-t">UE5 · Lumen</span></div></div>
   </div>
 
   <div class="footer"><div class="footer-l">Hirakawa Shion — Portfolio</div><div class="footer-r">© 2026 Hirakawa Shion · NieR: Automata fan art · Not for commercial use</div></div>
 </div>
 
-<!-- ═══ WORK ═══ -->
+<!-- WORK -->
 <div class="page" id="page-work">
   <div class="sh"><span class="sn">—</span><span class="st">Work</span><span class="sl"></span><span class="sd">商業制作実績</span></div>
   <div class="work-list">
     <div class="work-item rv">
-      <div class="work-img"><div class="iw" style="height:100%;min-height:240px"><img src="images/work/aww_sample.jpg" alt="aww_sample.jpg" style="width:100%;height:100%;object-fit:cover;"></div></div>
+      <div class="work-img"><div class="iw" style="height:100%;min-height:240px"><img src="images/work/aww_sample.jpg" alt="Virtual Human Production"></div></div>
       <div class="work-info">
         <div class="w-period">2019 — 2025 · 商業CG制作</div>
         <div class="w-ttl">バーチャルヒューマン制作</div>
@@ -379,7 +336,7 @@
       </div>
     </div>
     <div class="work-item rv d1">
-      <div class="work-img"><div class="iw" style="height:100%;min-height:240px"><img src="images/work/celllook_sample.jpg" alt="celllook_sample.jpg" style="width:100%;height:100%;object-fit:cover;"></div></div>
+      <div class="work-img"><div class="iw" style="height:100%;min-height:240px"><img src="images/work/celllook_sample.jpg" alt="Cell Look Production"></div></div>
       <div class="work-info">
         <div class="w-period">2025 · ゲームアセット制作</div>
         <div class="w-ttl">セルルック制作</div>
@@ -388,24 +345,23 @@
       </div>
     </div>
     <div class="work-item rv d2">
-      <div class="work-img"><div class="iw" style="height:100%;min-height:240px"><img src="images/work/digitaltwin_sample.jpg" alt="digitaltwin_sample.jpg" style="width:100%;height:100%;object-fit:cover;"></div></div>
+      <div class="work-img"><div class="iw" style="height:100%;min-height:240px"><img src="images/work/digitaltwin_sample.jpg" alt="Digital Twin Production"></div></div>
       <div class="work-info">
         <div class="w-period">2026 — · デジタルツイン制作</div>
         <div class="w-ttl">デジタルツイン制作</div>
-        <div class="w-desc">SpaceDataでのデジタルツインアセット制作とOpenUSDパイプライン検証。DCC間連携、MaterialX、Pythonツールによる制作フロー構築。リアル系・セルルックからパイプライン領域への展開。</div>
+        <div class="w-desc">SpaceDataでのデジタルツインアセット制作とOpenUSDパイプライン検証。DCC間連携、MaterialX、Pythonツールによる制作フロー構築。</div>
         <div class="tag-r"><span class="tag">Digital Twin</span><span class="tag">OpenUSD</span><span class="tag">MaterialX</span><span class="tag">Python</span></div>
       </div>
     </div>
   </div>
 
-  <!-- Eyewear Design Study — 控えめな補足 -->
   <div class="sh"><span class="sn">—</span><span class="st">Design Study</span><span class="sl"></span><span class="sd">造形探求 · フォームスタディ</span></div>
   <div style="display:grid;grid-template-columns:400px 1fr;border-bottom:1px solid var(--border);min-height:200px;" class="rv d3">
-    <div class="work-img"><div class="iw" style="height:100%;min-height:200px"><img src="images/work/eyewear_overall.jpg" alt="eyewear_overall.jpg" style="width:100%;height:100%;object-fit:cover;"></div></div>
+    <div class="work-img"><div class="iw" style="height:100%;min-height:200px"><img src="images/work/eyewear_overall.jpg" alt="Eyewear Design Study"></div></div>
     <div class="work-info">
       <div class="w-period">造形習作 · Form Study</div>
       <div class="w-ttl">Eyewear Design Study</div>
-      <div class="w-desc">ベルニーニのプロセルピナから影響を受けた造形習作。接触・面の変化・力の流れの観察をアイウェアのフォームに応用する試み。完成されたデザイン哲学ではなく、造形探求の記録として扱う。</div>
+      <div class="w-desc">ベルニーニのプロセルピナから影響を受けた造形習作。接触・面の変化・力の流れの観察をアイウェアのフォームに応用する試み。</div>
       <div class="tag-r"><span class="tag">Form Study</span><span class="tag">Sculpting</span><span class="tag">Shape Exploration</span></div>
     </div>
   </div>
@@ -413,7 +369,7 @@
   <div class="footer"><div class="footer-l">Hirakawa Shion — Portfolio</div><div class="footer-r">© 2026 Hirakawa Shion</div></div>
 </div>
 
-<!-- ═══ RESEARCH ═══ -->
+<!-- RESEARCH -->
 <div class="page" id="page-research">
   <div class="sh"><span class="sn">—</span><span class="st">Research</span><span class="sl"></span><span class="sd">LookDev · Color Management · USD · Pipeline</span></div>
 
@@ -473,12 +429,12 @@
   <div class="footer"><div class="footer-l">Hirakawa Shion — Portfolio</div><div class="footer-r">© 2026 Hirakawa Shion</div></div>
 </div>
 
-<!-- ═══ ABOUT ═══ -->
+<!-- ABOUT -->
 <div class="page" id="page-about">
   <div class="sh"><span class="sn">—</span><span class="st">About</span><span class="sl"></span><span class="sd">プロフィール · スキル · 連絡先</span></div>
   <div class="about-grid">
     <div class="about-left rv">
-      <div class="about-portrait"><div class="iw" style="height:100%"><img src="images/about/portrait_profile.jpg" alt="portrait_profile.jpg" style="width:100%;height:100%;object-fit:cover;"></div></div>
+      <div class="about-portrait"><div class="iw" style="height:100%"><img src="images/about/portrait_profile.jpg" alt="Portrait"></div></div>
       <div class="about-name-block">
         <div class="about-name">Hirakawa<br>Shion</div>
         <div class="about-role">Character Artist</div>
