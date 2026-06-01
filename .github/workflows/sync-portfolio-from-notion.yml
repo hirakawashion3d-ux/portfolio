@@ -147,8 +147,12 @@ jobs:
           console.log('- index.html');
           console.log('- style.css');
           console.log('- script.js');
-          NODE
 
+          })().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
       - name: Commit and push changes
         run: |
           if git diff --quiet -- index.html style.css script.js; then
