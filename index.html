@@ -155,7 +155,7 @@
   </div>
 </div>
 
-<!-- CHARACTERS — 2B (4 sections) -->
+<!-- CHARACTERS — 2B (4 narrative blocks, semantic sets preserved) -->
 <div class="page" id="page-characters">
 
   <!-- 01 HERO ============================================================ -->
@@ -197,30 +197,30 @@
     </div>
   </section>
 
-  <!-- 02 FINAL RENDER (Eye Detail + Full Body を補助として統合) =========== -->
+  <!-- 02 FINAL RENDER (1 main + 3 support, natural ratios) =============== -->
   <section class="c-section">
     <div class="c-sec-label">02 — Final Render</div>
-    <div class="c-gallery-grid rv">
-      <div class="c-gallery-main">
+    <div class="c-fr-grid rv">
+      <div class="c-fr-main">
         <div class="iw lb-t" style="height:100%" data-cap="Beauty Main · Cinematic Lighting" data-group="gallery">
           <img src="images/2b/beauty_main.jpg" alt="Beauty Main">
           <div class="ov"></div>
         </div>
       </div>
-      <div class="c-gallery-sub">
-        <div class="c-gallery-sub-item">
+      <div class="c-fr-rail">
+        <div class="c-fr-support">
           <div class="iw lb-t" style="height:100%" data-cap="Alt 01" data-group="gallery">
             <img src="images/2b/beauty_alt01.jpg" alt="Alt 01">
             <div class="ov"></div>
           </div>
         </div>
-        <div class="c-gallery-sub-item">
+        <div class="c-fr-support">
           <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="gallery">
             <img src="images/2b/eye_detail.jpg" alt="Eye Detail">
             <div class="ov"></div>
           </div>
         </div>
-        <div class="c-gallery-sub-item">
+        <div class="c-fr-support">
           <div class="iw lb-t" style="height:100%" data-cap="Full Body" data-group="gallery">
             <img src="images/2b/fullbody_front.jpg" alt="Full Body">
             <div class="ov"></div>
@@ -228,16 +228,17 @@
         </div>
       </div>
     </div>
-    <div class="c-gallery-caption">Cinematic lighting · PBR · UE5 Lumen · ACES CG</div>
+    <div class="c-fr-caption">Cinematic lighting · PBR · UE5 Lumen · ACES CG</div>
   </section>
 
-  <!-- 03 TECHNICAL FOCUS (各テーマ代表1枚、4枚グリッド廃止) =============== -->
+  <!-- 03 TECHNICAL FOCUS (Topology / Texture Set / LookDev) ============== -->
   <section class="c-section">
     <div class="c-sec-label">03 — Technical Focus</div>
-    <div class="c-tech-grid rv">
+    <div class="c-tech-stack rv">
 
-      <div class="c-tech-card">
-        <div class="c-tech-img">
+      <!-- Topology — 代表1枚 -->
+      <div class="c-tech-row">
+        <div class="c-tech-visual c-tech-single">
           <div class="iw lb-t" style="height:100%" data-cap="Face Topology" data-group="tech">
             <img src="images/2b/wireframe_face.jpg" alt="Topology">
             <div class="ov"></div>
@@ -250,39 +251,48 @@
         </div>
       </div>
 
-      <div class="c-tech-card">
-        <div class="c-tech-img">
-          <div class="iw lb-t" style="height:100%" data-cap="Albedo · PBR Suite" data-group="tech">
-            <img src="images/2b/tex_albedo.jpg" alt="Texture">
-            <div class="ov"></div>
+      <!-- Texture — semantic 4-image set を compact mini-grid で保持 -->
+      <div class="c-tech-row">
+        <div class="c-tech-visual">
+          <div class="c-tex-set">
+            <div class="c-tex-item"><div class="iw lb-t" data-cap="Albedo" data-group="tech"><img src="images/2b/tex_albedo.jpg" alt="Albedo"></div><span class="c-tex-lbl">Albedo</span></div>
+            <div class="c-tex-item"><div class="iw lb-t" data-cap="Normal" data-group="tech"><img src="images/2b/tex_normal.jpg" alt="Normal"></div><span class="c-tex-lbl">Normal</span></div>
+            <div class="c-tex-item"><div class="iw lb-t" data-cap="Roughness" data-group="tech"><img src="images/2b/tex_roughness.jpg" alt="Roughness"></div><span class="c-tex-lbl">Roughness</span></div>
+            <div class="c-tex-item"><div class="iw lb-t" data-cap="SSS" data-group="tech"><img src="images/2b/tex_sss.jpg" alt="SSS"></div><span class="c-tex-lbl">SSS</span></div>
           </div>
         </div>
         <div class="c-tech-body">
           <div class="c-tech-label">Texture</div>
           <div class="c-tech-title">PBR Material Suite</div>
-          <div class="c-tech-desc">4096px · Albedo / Normal / Roughness / SSS · ACEScgカラーパイプライン。</div>
+          <div class="c-tech-desc">4096px · Albedo / Normal / Roughness / SSS の4マップで構成。ACEScgカラーパイプライン。</div>
         </div>
       </div>
 
-      <div class="c-tech-card">
-        <div class="c-tech-img">
-          <div class="iw lb-t" style="height:100%" data-cap="UE5 Lumen LookDev" data-group="tech">
-            <img src="images/2b/ld_ue5.jpg" alt="LookDev">
-            <div class="ov"></div>
+      <!-- LookDev — 代表1枚を少し強め + 小比較2枚 -->
+      <div class="c-tech-row">
+        <div class="c-tech-visual">
+          <div class="c-ld-set">
+            <div class="c-ld-main">
+              <div class="iw lb-t" style="height:100%" data-cap="UE5 Lumen LookDev" data-group="tech"><img src="images/2b/ld_ue5.jpg" alt="LookDev UE5"><div class="ov"></div></div>
+            </div>
+            <div class="c-ld-subs">
+              <div class="iw lb-t" data-cap="Studio Neutral" data-group="tech"><img src="images/2b/ld_studio.jpg" alt="Studio"></div>
+              <div class="iw lb-t" data-cap="Backlight" data-group="tech"><img src="images/2b/ld_backlight.jpg" alt="Backlight"></div>
+            </div>
           </div>
         </div>
         <div class="c-tech-body">
           <div class="c-tech-label">LookDev</div>
           <div class="c-tech-title">ライティング検証</div>
-          <div class="c-tech-desc">Studio / Backlight / Outdoor HDRI / UE5 Lumen でマテリアルレスポンスを確認。</div>
+          <div class="c-tech-desc">UE5 Lumenを代表に、Studio / Backlight環境でマテリアルレスポンスを比較確認。</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- 04 PROCESS (カード強弱あり) ======================================== -->
-  <section class="c-section">
+  <!-- 04 PROCESS (weakest section) ====================================== -->
+  <section class="c-section c-proc-sec">
     <div class="c-sec-label">04 — Production Process</div>
     <div class="c-proc-intro rv">
       <p class="c-proc-desc">スカルプトから最終LookDevまで一貫した制作フロー。各フェーズで品質基準を確認しながら進行。</p>
@@ -291,22 +301,22 @@
       <div class="c-proc-card c-proc-primary">
         <div class="ps-num">01 — 03</div>
         <div class="ps-ttl">Sculpt</div>
-        <div class="ps-desc">リファレンス収集、ブロックアウト、ZBrushによるハイポリスカルプト。肌の造形・ハードサーフェスを高解像度で仕上げ。</div>
+        <div class="ps-desc">リファレンス収集、ブロックアウト、ZBrushによるハイポリスカルプト。</div>
       </div>
       <div class="c-proc-card">
         <div class="ps-num">04</div>
         <div class="ps-ttl">Retopology</div>
-        <div class="ps-desc">ZRemesher + Maya手動クリーンアップ。変形を意識したエッジフロー設計。</div>
+        <div class="ps-desc">ZRemesher + Maya手動クリーンアップ。</div>
       </div>
       <div class="c-proc-card">
         <div class="ps-num">05</div>
         <div class="ps-ttl">UV / Bake</div>
-        <div class="ps-desc">モジュラーなシームカット。各種マップをベイク。</div>
+        <div class="ps-desc">シームカット設計と各種マップのベイク。</div>
       </div>
       <div class="c-proc-card">
         <div class="ps-num">06</div>
         <div class="ps-ttl">Texture / LookDev</div>
-        <div class="ps-desc">Substance PainterでPBRテクスチャリング。UE5 + ACEScgで最終検証。</div>
+        <div class="ps-desc">PBRテクスチャリングとUE5最終検証。</div>
       </div>
     </div>
     <div class="c-tools-bar">
