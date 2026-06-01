@@ -192,17 +192,15 @@
   <div class="proc-grid rv">
     <div class="proc-step"><div class="ps-num">01</div><div class="ps-ttl">リファレンス収集</div><div class="ps-desc">公式アートワーク・スクリーンショットを収集。シルエットとプロポーションの目標値を設定。</div></div>
     <div class="proc-step"><div class="ps-num">02</div><div class="ps-ttl">ベースメッシュ</div><div class="ps-desc">ZBrushで球体からブロックアウト。一次形状とマスの分布を確立。</div></div>
-    <div class="proc-step"><div class="ps-num">03</div><div class="ps-ttl">ハイポリスカルプト</div><div class="ps-desc">ZBrushで数百万ポリゴン。肌のポア・布の織り目・ハードサーフェスを高解像度でスカルプト。</div></div>
+    <div class="proc-step"><div class="ps-num">03</div><div class="ps-ttl">ハイポリスカルプト</div><div class="ps-desc">ZBrushで数百万ポリゴン。肌の造形・布の織り目・ハードサーフェスを高解像度でスカルプト。</div></div>
     <div class="proc-step"><div class="ps-num">04</div><div class="ps-ttl">リトポロジー</div><div class="ps-desc">ZRemesher + Mayaで手動クリーンアップ。アニメーション変形に最適化したエッジフロー。</div></div>
     <div class="proc-step"><div class="ps-num">05</div><div class="ps-ttl">UV展開 · ベイク</div><div class="ps-desc">Mayaでモジュラーなシームカット設計。AO・ノーマル・カーブチャー・厚みの各パスをベイク。</div></div>
     <div class="proc-step"><div class="ps-num">06</div><div class="ps-ttl">テクスチャ · LookDev</div><div class="ps-desc">Substance PainterでPBRテクスチャリング。Photoshopで仕上げ調整。UE5でLookDev・検証。</div></div>
   </div>
+  <!-- proc-gal: 密度を下げるため3枚に削減 -->
   <div class="proc-gal rv d1">
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Reference" data-group="proc"><img src="images/2b/proc_reference.jpg" alt="Reference"><div class="ov"></div></div><div class="pg-lbl">Reference</div></div>
     <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Blockout" data-group="proc"><img src="images/2b/proc_blockout.jpg" alt="Blockout"><div class="ov"></div></div><div class="pg-lbl">Blockout</div></div>
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Mid Sculpt" data-group="proc"><img src="images/2b/proc_midsculpt.jpg" alt="Mid Sculpt"><div class="ov"></div></div><div class="pg-lbl">Mid Sculpt</div></div>
     <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="High Poly" data-group="proc"><img src="images/2b/proc_highpoly.jpg" alt="High Poly"><div class="ov"></div></div><div class="pg-lbl">High Poly</div></div>
-    <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Retopology" data-group="proc"><img src="images/2b/proc_retopology.jpg" alt="Retopology"><div class="ov"></div></div><div class="pg-lbl">Retopology</div></div>
     <div class="pg-item"><div class="iw lb-t" style="height:100%" data-cap="Textured" data-group="proc"><img src="images/2b/proc_textured.jpg" alt="Textured"><div class="ov"></div></div><div class="pg-lbl">Textured</div></div>
   </div>
   <div class="proc-tools">
@@ -217,7 +215,6 @@
         <img src="images/2b/beauty_main.jpg" alt="Beauty Main">
         <div class="ov"></div>
       </div>
-      <div class="b-cap">Beauty Main · Cinematic Lighting</div>
     </div>
     <div class="b-sub">
       <div class="b-sub-img"><div class="iw lb-t" data-cap="Alt 01" data-group="beauty"><img src="images/2b/beauty_alt01.jpg" alt="Alt 01"><div class="ov"></div></div></div>
@@ -232,18 +229,19 @@
   </div>
 
   <div class="sh"><span class="sn">04</span><span class="st">Face</span><span class="sl"></span><span class="sd">クローズアップ · Eye Detail · スキン · ヘア</span></div>
+  <!-- face-row1: テキスト被りを解消 — face-hlをdiv外に移動 -->
   <div class="face-row1 rv">
     <div class="face-main">
       <div class="iw lb-t" data-cap="Face Front" data-group="face"><img src="images/2b/face_front.jpg" alt="Face Front"><div class="ov"></div></div>
-      <div class="face-hl"><span class="stag">Face · Close-up</span></div>
+      <div class="face-lbl-bar"><span class="stag">Face · Close-up</span></div>
     </div>
     <div class="face-eye-hero">
       <div class="iw lb-t" data-cap="Eye Detail" data-group="face"><img src="images/2b/eye_detail.jpg" alt="Eye Detail"><div class="ov"></div></div>
       <div class="face-eye-lbl">Eye Detail</div>
     </div>
   </div>
+  <!-- face-row2: Skin Pores削除、3枚→均等3カラム -->
   <div class="face-row2 rv">
-    <div class="face-det2"><div class="iw lb-t" data-cap="Skin Pores" data-group="face"><img src="images/2b/face_skin_pores.jpg" alt="Skin Pores"><div class="ov"></div></div><div class="face-det-lbl">Skin Pores</div></div>
     <div class="face-det2"><div class="iw lb-t" data-cap="Subsurface" data-group="face"><img src="images/2b/face_subsurface.jpg" alt="Subsurface"><div class="ov"></div></div><div class="face-det-lbl">Subsurface</div></div>
     <div class="face-det2"><div class="iw lb-t" data-cap="Hair Strands" data-group="face"><img src="images/2b/face_hair_strands.jpg" alt="Hair Strands"><div class="ov"></div></div><div class="face-det-lbl">Hair Strands</div></div>
     <div class="face-det2"><div class="iw lb-t" data-cap="Profile" data-group="face"><img src="images/2b/face_profile.jpg" alt="Profile"><div class="ov"></div></div><div class="face-det-lbl">Profile</div></div>
@@ -280,7 +278,6 @@
       <div class="stag">06 — Wireframe</div>
       <h3>Topology</h3>
       <div class="wf-copy">変形時の流れ、シルエットの維持、制作上の読みやすさを意識したトポロジー。</div>
-      <div class="wf-copy" style="color:var(--dim);font-size:7px;">Topology designed for deformation awareness, clean silhouette preservation, and production readability.</div>
     </div>
   </div>
 
@@ -300,12 +297,11 @@
       <div class="tex-spec"><span class="k">カラースペース</span><span class="v">RAW / sRGB</span></div>
       <div class="tex-spec"><span class="k">カラーマネジメント</span><span class="v">ACES CG</span></div>
     </div>
+    <!-- tex-channels: 6枠→4枠に削減して密度を下げる -->
     <div class="ch-strip-lbl">Channel Maps</div>
     <div class="tex-channels">
       <div class="ch-item"><div class="iw lb-t" data-cap="AO" data-group="ch"><img src="images/2b/tex_ao.jpg" alt="AO"></div><div class="ch-lbl">AO</div></div>
       <div class="ch-item"><div class="iw lb-t" data-cap="SSS" data-group="ch"><img src="images/2b/tex_sss.jpg" alt="SSS"></div><div class="ch-lbl">SSS</div></div>
-      <div class="ch-item"><div class="iw lb-t" data-cap="Emission" data-group="ch"><img src="images/2b/tex_emission.jpg" alt="Emission"></div><div class="ch-lbl">Emission</div></div>
-      <div class="ch-item"><div class="iw lb-t" data-cap="Opacity" data-group="ch"><img src="images/2b/tex_opacity.jpg" alt="Opacity"></div><div class="ch-lbl">Opacity</div></div>
       <div class="ch-item"><div class="iw lb-t" data-cap="Height" data-group="ch"><img src="images/2b/tex_height.jpg" alt="Height"></div><div class="ch-lbl">Height</div></div>
       <div class="ch-item"><div class="iw lb-t" data-cap="UV Layout" data-group="ch"><img src="images/2b/tex_uv.jpg" alt="UV"></div><div class="ch-lbl">UV Map</div></div>
     </div>
