@@ -2,9 +2,15 @@ name: Sync portfolio from Notion
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
 
 permissions:
   contents: write
+
+concurrency:
+  group: sync-portfolio-from-notion
+  cancel-in-progress: false
 
 jobs:
   sync:
