@@ -124,7 +124,7 @@ a{text-decoration:none;color:inherit;}
 .hts-tag:hover{border-color:var(--gold2);color:var(--white);}
 
 /* ============================================================
-   CHARACTERS PAGE — 2B (44 rebalance)
+   CHARACTERS PAGE — 2B
    Order: Hero / Process / Final Render / Technical Focus
    ============================================================ */
 .c-section{padding:var(--sp-y) var(--sp-x);}
@@ -149,7 +149,6 @@ a{text-decoration:none;color:inherit;}
 .cm-k{font-size:6px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 .study-b{display:inline-block;padding:4px 10px;border:1px solid var(--border2);font-size:6px;letter-spacing:.15em;color:var(--dim);}
 .c-hero-right{display:flex;flex-direction:column;gap:0;}
-/* Hero main image now single — fills the right column, no thumbs below */
 .c-hero-main-img{width:100%;aspect-ratio:3/4;max-height:80vh;}
 .c-hero-main-img .iw{height:100%;}
 
@@ -167,16 +166,14 @@ a{text-decoration:none;color:inherit;}
 .sw-lbl{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
-/* 03 FINAL RENDER — main + support rail. Priority: Full Body > View > Eye */
-.c-fr-grid{display:grid;grid-template-columns:2fr 1.15fr;gap:var(--gap);margin-bottom:18px;align-items:stretch;}
-.c-fr-main{aspect-ratio:4/5;}
+/* 03 FINAL RENDER — 45: Beauty Main縮小、support比率を強める
+   Beauty Mainを正方形に縮め、support railの相対幅を拡大。
+   support rowは Full Body(1.8) > View(1.3) > Eye(0.9) で明確な強弱。 */
+.c-fr-grid{display:grid;grid-template-columns:1.5fr 1.4fr;gap:var(--gap);margin-bottom:18px;align-items:stretch;}
+.c-fr-main{aspect-ratio:1/1;}
 .c-fr-main .iw{height:100%;}
-/* support rail: Full Body largest, View medium, Eye smallest (row spans) */
-.c-fr-rail{display:grid;grid-template-rows:1.5fr 1.2fr 1fr;gap:var(--gap);}
+.c-fr-rail{display:grid;grid-template-rows:1.8fr 1.3fr 0.9fr;gap:var(--gap);}
 .c-fr-support .iw{width:100%;height:100%;}
-.c-fr-fullbody .iw{aspect-ratio:auto;}
-.c-fr-view .iw{aspect-ratio:auto;}
-.c-fr-eye .iw{aspect-ratio:auto;}
 .c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 
 /* 04 TECHNICAL FOCUS */
@@ -202,12 +199,13 @@ a{text-decoration:none;color:inherit;}
 .c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.92;}
 .c-tex-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
-/* Lighting Verification — main + 2 sub, sub伸ばし空枠なし */
-.c-ld-set{display:flex;flex-direction:column;gap:12px;}
-.c-ld-main{aspect-ratio:16/9;}
+/* Lighting Verification — 45: main + 下2枚を縦方向に伸ばし空枠解消
+   下2枚を 3/4 の縦長にして浅い横長枠を解消。mainとの比率を整える。 */
+.c-ld-set{display:flex;flex-direction:column;gap:14px;}
+.c-ld-main{aspect-ratio:16/10;}
 .c-ld-main .iw{height:100%;}
-.c-ld-subs{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.c-ld-sub{aspect-ratio:4/3;}
+.c-ld-subs{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.c-ld-sub{aspect-ratio:3/4;}
 .c-ld-sub .iw{height:100%;opacity:.9;}
 
 /* WORK */
@@ -294,7 +292,7 @@ a{text-decoration:none;color:inherit;}
   /* Final Render: main on top, support rail horizontal (keep size order) */
   .c-fr-grid{grid-template-columns:1fr;gap:var(--gap);}
   .c-fr-main{aspect-ratio:4/5;}
-  .c-fr-rail{grid-template-rows:none;grid-template-columns:1.5fr 1.2fr 1fr;}
+  .c-fr-rail{grid-template-rows:none;grid-template-columns:1.8fr 1.3fr 0.9fr;}
   .c-fr-support .iw{aspect-ratio:3/4;}
 
   /* Technical: stack visual over body */
@@ -330,16 +328,15 @@ a{text-decoration:none;color:inherit;}
   /* Process */
   .c-proc-grid{grid-template-columns:1fr;}
 
-  /* Final Render: keep priority order, stack vertically; drop nothing here
-     but keep Full Body largest. View + Eye share a row to reduce height */
+  /* Final Render: keep priority order; Full Body full width largest, View+Eye share row */
   .c-fr-rail{grid-template-rows:none;grid-template-columns:1fr 1fr;}
   .c-fr-fullbody{grid-column:1 / -1;}
   .c-fr-support .iw{aspect-ratio:4/3;}
   .c-fr-fullbody .iw{aspect-ratio:4/5;}
 
-  /* Technical: Texture stays 2x2; Topology stays 2-up; LookDev subs hidden */
+  /* Technical: Texture 2x2; Topology 2-up; LookDev subs縦長維持 */
   .c-tech-stack{gap:48px;}
   .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
   .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}
-  .c-ld-subs{display:none;}
+  .c-ld-subs{grid-template-columns:1fr 1fr;gap:12px;}
 }
