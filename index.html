@@ -155,10 +155,10 @@
   </div>
 </div>
 
-<!-- CHARACTERS -->
+<!-- CHARACTERS — 2B (4 sections) -->
 <div class="page" id="page-characters">
 
-  <!-- 01 HERO -->
+  <!-- 01 HERO ============================================================ -->
   <section class="c-section c-hero-sec">
     <div class="c-sec-label">01 — Hero</div>
     <div class="c-hero-grid">
@@ -189,15 +189,15 @@
           </div>
         </div>
         <div class="c-hero-thumbs">
-          <div class="ct active"><div class="iw" style="height:100%"><img src="images/2b/hero_2b.jpg" alt="Face"></div><span class="ct-lbl">Face</span></div>
-          <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/hero_34.jpg" alt="3/4"></div><span class="ct-lbl">3/4</span></div>
+          <div class="ct active"><div class="iw" style="height:100%"><img src="images/2b/hero_34.jpg" alt="3/4"></div><span class="ct-lbl">3/4</span></div>
+          <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/fullbody_front.jpg" alt="Full Body"></div><span class="ct-lbl">Body</span></div>
           <div class="ct"><div class="iw" style="height:100%"><img src="images/2b/wireframe_full.jpg" alt="Wire"></div><span class="ct-lbl">Wire</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 02 GALLERY — Final Render -->
+  <!-- 02 FINAL RENDER (Eye Detail + Full Body を補助として統合) =========== -->
   <section class="c-section">
     <div class="c-sec-label">02 — Final Render</div>
     <div class="c-gallery-grid rv">
@@ -215,8 +215,14 @@
           </div>
         </div>
         <div class="c-gallery-sub-item">
-          <div class="iw lb-t" style="height:100%" data-cap="Face Close-up" data-group="gallery">
-            <img src="images/2b/face_front.jpg" alt="Face">
+          <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="gallery">
+            <img src="images/2b/eye_detail.jpg" alt="Eye Detail">
+            <div class="ov"></div>
+          </div>
+        </div>
+        <div class="c-gallery-sub-item">
+          <div class="iw lb-t" style="height:100%" data-cap="Full Body" data-group="gallery">
+            <img src="images/2b/fullbody_front.jpg" alt="Full Body">
             <div class="ov"></div>
           </div>
         </div>
@@ -225,57 +231,9 @@
     <div class="c-gallery-caption">Cinematic lighting · PBR · UE5 Lumen · ACES CG</div>
   </section>
 
-  <!-- 03 PRODUCTION PROCESS -->
+  <!-- 03 TECHNICAL FOCUS (各テーマ代表1枚、4枚グリッド廃止) =============== -->
   <section class="c-section">
-    <div class="c-sec-label">03 — Production Process</div>
-    <div class="c-proc-intro rv">
-      <p class="c-proc-desc">スカルプトから最終LookDevまで一貫した制作フロー。各フェーズで品質基準を確認しながら進行。</p>
-    </div>
-    <div class="c-proc-grid rv d1">
-      <div class="c-proc-card c-proc-primary">
-        <div class="ps-num">01 — 03</div>
-        <div class="ps-ttl">Sculpt</div>
-        <div class="ps-desc">リファレンス収集、ブロックアウト、ZBrushによるハイポリスカルプト。肌の造形・ハードサーフェスを高解像度で仕上げ。</div>
-      </div>
-      <div class="c-proc-card">
-        <div class="ps-num">04</div>
-        <div class="ps-ttl">Retopology</div>
-        <div class="ps-desc">ZRemesher + Maya手動クリーンアップ。変形を意識したエッジフロー設計。</div>
-      </div>
-      <div class="c-proc-card">
-        <div class="ps-num">05</div>
-        <div class="ps-ttl">UV / Bake</div>
-        <div class="ps-desc">モジュラーなシームカット。AO・Normal・Curvature・Thicknessの各パスをベイク。</div>
-      </div>
-      <div class="c-proc-card">
-        <div class="ps-num">06</div>
-        <div class="ps-ttl">Texture / LookDev</div>
-        <div class="ps-desc">Substance PainterでPBRテクスチャリング。UE5 + ACEScgでLookDev・最終検証。</div>
-      </div>
-    </div>
-    <div class="c-proc-gal rv d2">
-      <div class="c-proc-gal-item">
-        <div class="iw lb-t" data-cap="Blockout" data-group="proc"><img src="images/2b/proc_blockout.jpg" alt="Blockout"><div class="ov"></div></div>
-        <div class="c-gal-lbl">Blockout</div>
-      </div>
-      <div class="c-proc-gal-item">
-        <div class="iw lb-t" data-cap="High Poly" data-group="proc"><img src="images/2b/proc_highpoly.jpg" alt="High Poly"><div class="ov"></div></div>
-        <div class="c-gal-lbl">High Poly</div>
-      </div>
-      <div class="c-proc-gal-item">
-        <div class="iw lb-t" data-cap="Textured" data-group="proc"><img src="images/2b/proc_textured.jpg" alt="Textured"><div class="ov"></div></div>
-        <div class="c-gal-lbl">Textured</div>
-      </div>
-    </div>
-    <div class="c-tools-bar">
-      <span class="sw-lbl">Tools</span>
-      <span class="sw-tag">ZBrush</span><span class="sw-tag">Maya</span><span class="sw-tag">Substance 3D Painter</span><span class="sw-tag">Photoshop</span><span class="sw-tag">Unreal Engine 5</span>
-    </div>
-  </section>
-
-  <!-- 04 TECHNICAL FOCUS -->
-  <section class="c-section">
-    <div class="c-sec-label">04 — Technical Focus</div>
+    <div class="c-sec-label">03 — Technical Focus</div>
     <div class="c-tech-grid rv">
 
       <div class="c-tech-card">
@@ -293,11 +251,11 @@
       </div>
 
       <div class="c-tech-card">
-        <div class="c-tech-img-grid">
-          <div class="iw lb-t" data-cap="Albedo" data-group="tech"><img src="images/2b/tex_albedo.jpg" alt="Albedo"></div>
-          <div class="iw lb-t" data-cap="Normal" data-group="tech"><img src="images/2b/tex_normal.jpg" alt="Normal"></div>
-          <div class="iw lb-t" data-cap="Roughness" data-group="tech"><img src="images/2b/tex_roughness.jpg" alt="Roughness"></div>
-          <div class="iw lb-t" data-cap="SSS" data-group="tech"><img src="images/2b/tex_sss.jpg" alt="SSS"></div>
+        <div class="c-tech-img">
+          <div class="iw lb-t" style="height:100%" data-cap="Albedo · PBR Suite" data-group="tech">
+            <img src="images/2b/tex_albedo.jpg" alt="Texture">
+            <div class="ov"></div>
+          </div>
         </div>
         <div class="c-tech-body">
           <div class="c-tech-label">Texture</div>
@@ -307,91 +265,53 @@
       </div>
 
       <div class="c-tech-card">
-        <div class="c-tech-img-grid">
-          <div class="iw lb-t" data-cap="Studio Neutral" data-group="tech"><img src="images/2b/ld_studio.jpg" alt="Studio"></div>
-          <div class="iw lb-t" data-cap="Backlight" data-group="tech"><img src="images/2b/ld_backlight.jpg" alt="Backlight"></div>
-          <div class="iw lb-t" data-cap="Outdoor HDRI" data-group="tech"><img src="images/2b/ld_outdoor.jpg" alt="Outdoor"></div>
-          <div class="iw lb-t" data-cap="UE5 Lumen" data-group="tech"><img src="images/2b/ld_ue5.jpg" alt="UE5"></div>
+        <div class="c-tech-img">
+          <div class="iw lb-t" style="height:100%" data-cap="UE5 Lumen LookDev" data-group="tech">
+            <img src="images/2b/ld_ue5.jpg" alt="LookDev">
+            <div class="ov"></div>
+          </div>
         </div>
         <div class="c-tech-body">
           <div class="c-tech-label">LookDev</div>
           <div class="c-tech-title">ライティング検証</div>
-          <div class="c-tech-desc">Studio / Backlight / Outdoor HDRI / UE5 Lumen の4環境でマテリアルレスポンスを確認。</div>
+          <div class="c-tech-desc">Studio / Backlight / Outdoor HDRI / UE5 Lumen でマテリアルレスポンスを確認。</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- 05 FACE DETAIL -->
+  <!-- 04 PROCESS (カード強弱あり) ======================================== -->
   <section class="c-section">
-    <div class="c-sec-label">05 — Face Detail</div>
-    <div class="c-face-grid rv">
-      <div class="c-face-main">
-        <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="face">
-          <img src="images/2b/eye_detail.jpg" alt="Eye Detail">
-          <div class="ov"></div>
-        </div>
-        <div class="c-face-lbl">Eye Detail — Subsurface · Hair Strands</div>
+    <div class="c-sec-label">04 — Production Process</div>
+    <div class="c-proc-intro rv">
+      <p class="c-proc-desc">スカルプトから最終LookDevまで一貫した制作フロー。各フェーズで品質基準を確認しながら進行。</p>
+    </div>
+    <div class="c-proc-grid rv d1">
+      <div class="c-proc-card c-proc-primary">
+        <div class="ps-num">01 — 03</div>
+        <div class="ps-ttl">Sculpt</div>
+        <div class="ps-desc">リファレンス収集、ブロックアウト、ZBrushによるハイポリスカルプト。肌の造形・ハードサーフェスを高解像度で仕上げ。</div>
       </div>
-      <div class="c-face-subs">
-        <div class="c-face-sub-item">
-          <div class="iw lb-t" style="height:100%" data-cap="Subsurface" data-group="face">
-            <img src="images/2b/face_subsurface.jpg" alt="Subsurface">
-            <div class="ov"></div>
-          </div>
-          <div class="c-face-sub-lbl">Subsurface</div>
-        </div>
-        <div class="c-face-sub-item">
-          <div class="iw lb-t" style="height:100%" data-cap="Hair Strands" data-group="face">
-            <img src="images/2b/face_hair_strands.jpg" alt="Hair Strands">
-            <div class="ov"></div>
-          </div>
-          <div class="c-face-sub-lbl">Hair Strands</div>
-        </div>
-        <div class="c-face-sub-item">
-          <div class="iw lb-t" style="height:100%" data-cap="Profile" data-group="face">
-            <img src="images/2b/face_profile.jpg" alt="Profile">
-            <div class="ov"></div>
-          </div>
-          <div class="c-face-sub-lbl">Profile</div>
-        </div>
+      <div class="c-proc-card">
+        <div class="ps-num">04</div>
+        <div class="ps-ttl">Retopology</div>
+        <div class="ps-desc">ZRemesher + Maya手動クリーンアップ。変形を意識したエッジフロー設計。</div>
+      </div>
+      <div class="c-proc-card">
+        <div class="ps-num">05</div>
+        <div class="ps-ttl">UV / Bake</div>
+        <div class="ps-desc">モジュラーなシームカット。各種マップをベイク。</div>
+      </div>
+      <div class="c-proc-card">
+        <div class="ps-num">06</div>
+        <div class="ps-ttl">Texture / LookDev</div>
+        <div class="ps-desc">Substance PainterでPBRテクスチャリング。UE5 + ACEScgで最終検証。</div>
       </div>
     </div>
-    <div class="c-face-stat rv d1">
-      <div class="fs-item"><span class="fs-v">8,200</span><span class="fs-k">Face Polygons</span></div>
-      <div class="fs-item"><span class="fs-v">4K</span><span class="fs-k">Skin Map</span></div>
-      <div class="fs-item"><span class="fs-v">SSS</span><span class="fs-k">Shader</span></div>
-      <div class="fs-item"><span class="fs-v">32-bit</span><span class="fs-k">Normal Depth</span></div>
-    </div>
-  </section>
-
-  <!-- 06 FULL BODY -->
-  <section class="c-section">
-    <div class="c-sec-label">06 — Full Body</div>
-    <div class="c-fb-grid rv">
-      <div class="c-fb-view">
-        <div class="iw lb-t" data-cap="Full Body Front" data-group="fb">
-          <img src="images/2b/fullbody_front.jpg" alt="Front"><div class="ov"></div>
-        </div>
-        <div class="c-fb-lbl">FRONT</div>
-      </div>
-      <div class="c-fb-view">
-        <div class="iw lb-t" data-cap="Full Body Side" data-group="fb">
-          <img src="images/2b/fullbody_side.jpg" alt="Side"><div class="ov"></div>
-        </div>
-        <div class="c-fb-lbl">SIDE</div>
-      </div>
-      <div class="c-fb-view">
-        <div class="iw lb-t" data-cap="Full Body Back" data-group="fb">
-          <img src="images/2b/fullbody_back.jpg" alt="Back"><div class="ov"></div>
-        </div>
-        <div class="c-fb-lbl">BACK</div>
-      </div>
-    </div>
-    <div class="c-fb-info rv d1">
-      <div class="fs-item"><span class="fs-v">86K</span><span class="fs-k">Total Polygons</span></div>
-      <div class="fs-item"><span class="fs-v">8 wks</span><span class="fs-k">Production Period</span></div>
+    <div class="c-tools-bar">
+      <span class="sw-lbl">Tools</span>
+      <span class="sw-tag">ZBrush</span><span class="sw-tag">Maya</span><span class="sw-tag">Substance 3D Painter</span><span class="sw-tag">Photoshop</span><span class="sw-tag">Unreal Engine 5</span>
     </div>
   </section>
 
