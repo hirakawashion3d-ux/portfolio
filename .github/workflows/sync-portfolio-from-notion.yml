@@ -26,10 +26,9 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
         run: |
-         node --input-type=commonjs <<'NODE'
-          (async () => {
-           const fs = require('fs');
-          const path = require('path');
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
 
           const notionToken = process.env.NOTION_TOKEN;
           const pageId = process.env.NOTION_PAGE_ID;
@@ -147,12 +146,8 @@ jobs:
           console.log('- index.html');
           console.log('- style.css');
           console.log('- script.js');
-
-          })().catch(error => {
-            console.error(error);
-            process.exit(1);
-          });
           NODE
+
       - name: Commit and push changes
         run: |
           if git diff --quiet -- index.html style.css script.js; then
