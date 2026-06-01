@@ -125,14 +125,15 @@ a{text-decoration:none;color:inherit;}
 
 /* ============================================================
    CHARACTERS PAGE — 2B
-   Order: Hero / Process / Final Render / Technical Focus
+   Section order: 01 Hero / 02 Workflow / 03 Final Render / 04 Technical Focus
+   45 user FB: confirmed all 3 items (Beauty Main / support ratio / Lighting)
    ============================================================ */
 .c-section{padding:var(--sp-y) var(--sp-x);}
 .c-section > *{max-width:var(--maxw);margin-left:auto;margin-right:auto;}
 .c-section + .c-section{border-top:1px solid var(--border);}
 .c-sec-label{font-size:7px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:48px;}
 
-/* 01 HERO — single strong main image, no support rail */
+/* 01 HERO */
 .c-hero-sec{padding-top:calc(var(--sp-y) * 1.2);}
 .c-hero-grid{display:grid;grid-template-columns:2fr 3fr;gap:72px;align-items:start;}
 .c-hero-left{display:flex;flex-direction:column;gap:0;}
@@ -152,7 +153,7 @@ a{text-decoration:none;color:inherit;}
 .c-hero-main-img{width:100%;aspect-ratio:3/4;max-height:80vh;}
 .c-hero-main-img .iw{height:100%;}
 
-/* 02 PROCESS — moved to 2nd (recruiter-priority workflow) */
+/* 02 PROCESS */
 .c-proc-sec .c-sec-label{}
 .c-proc-intro{margin-bottom:36px;}
 .c-proc-desc{font-size:9px;color:var(--mid);line-height:1.9;max-width:480px;}
@@ -166,9 +167,10 @@ a{text-decoration:none;color:inherit;}
 .sw-lbl{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
-/* 03 FINAL RENDER — 45: Beauty Main縮小、support比率を強める
-   Beauty Mainを正方形に縮め、support railの相対幅を拡大。
-   support rowは Full Body(1.8) > View(1.3) > Eye(0.9) で明確な強弱。 */
+/* 03 FINAL RENDER
+   45 FB [1]: Beauty Main = 1.5fr (縮小) / aspect-ratio 1/1
+   45 FB [2]: support rail = 1.8fr(Full Body最大) 1.3fr(View中) 0.9fr(Eye最小)
+              Alt削除済み。枠ズレなし。 */
 .c-fr-grid{display:grid;grid-template-columns:1.5fr 1.4fr;gap:var(--gap);margin-bottom:18px;align-items:stretch;}
 .c-fr-main{aspect-ratio:1/1;}
 .c-fr-main .iw{height:100%;}
@@ -187,20 +189,21 @@ a{text-decoration:none;color:inherit;}
 .c-tech-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);font-weight:300;}
 .c-tech-desc{font-size:8px;color:var(--mid);line-height:1.9;max-width:320px;}
 
-/* Topology — Front / Back の2枠 */
+/* Topology Front/Back */
 .c-topo-set{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .c-topo-item{display:flex;flex-direction:column;gap:6px;}
 .c-topo-item .iw{width:100%;aspect-ratio:3/4;}
 .c-topo-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
-/* Texture — ORM / Diffuse / Normal / SSS Mask の2x2 compact mini-grid */
+/* Texture ORM/Diffuse/Normal/SSS Mask */
 .c-tex-set{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
 .c-tex-item{display:flex;flex-direction:column;gap:5px;}
 .c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.92;}
 .c-tex-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
-/* Lighting Verification — 45: main + 下2枚を縦方向に伸ばし空枠解消
-   下2枚を 3/4 の縦長にして浅い横長枠を解消。mainとの比率を整える。 */
+/* Lighting Verification
+   45 FB [3]: 下2枚 = aspect-ratio 3/4 (縦長) で浅い横長枠を解消
+              main = 16/10、gap拡大で空枠感を排除 */
 .c-ld-set{display:flex;flex-direction:column;gap:14px;}
 .c-ld-main{aspect-ratio:16/10;}
 .c-ld-main .iw{height:100%;}
@@ -285,21 +288,16 @@ a{text-decoration:none;color:inherit;}
 
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
-
-  /* Process */
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
 
-  /* Final Render: main on top, support rail horizontal (keep size order) */
+  /* Final Render: main→上、support→横並び(サイズ比維持) */
   .c-fr-grid{grid-template-columns:1fr;gap:var(--gap);}
   .c-fr-main{aspect-ratio:4/5;}
   .c-fr-rail{grid-template-rows:none;grid-template-columns:1.8fr 1.3fr 0.9fr;}
   .c-fr-support .iw{aspect-ratio:3/4;}
 
-  /* Technical: stack visual over body */
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
   .c-tech-row:nth-child(even) .c-tech-visual{order:0;}
-
-  /* Work / About / Research */
   .work-item{grid-template-columns:1fr;}
   .work-img{border-right:none;border-bottom:1px solid var(--border);}
   .work-info{padding:24px var(--sp-x);}
@@ -313,7 +311,7 @@ a{text-decoration:none;color:inherit;}
 }
 
 /* ============================================================
-   MOBILE — 1 column, reduce visual count (not shrink)
+   MOBILE — 1 column, reduce visual count
    ============================================================ */
 @media (max-width:600px){
   :root{--sp-x:24px;--sp-y:56px;--gap:24px;}
@@ -321,20 +319,15 @@ a{text-decoration:none;color:inherit;}
   .home-tools-strip{flex-direction:column;}
   .hts-group{border-right:none;border-bottom:1px solid var(--border);}
   .nav-tiles{grid-template-columns:1fr;}
-
-  /* Hero: single main image only */
   .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
-
-  /* Process */
   .c-proc-grid{grid-template-columns:1fr;}
 
-  /* Final Render: keep priority order; Full Body full width largest, View+Eye share row */
+  /* Final Render mobile: Full Body全幅、View+Eye横並び */
   .c-fr-rail{grid-template-rows:none;grid-template-columns:1fr 1fr;}
   .c-fr-fullbody{grid-column:1 / -1;}
   .c-fr-support .iw{aspect-ratio:4/3;}
   .c-fr-fullbody .iw{aspect-ratio:4/5;}
 
-  /* Technical: Texture 2x2; Topology 2-up; LookDev subs縦長維持 */
   .c-tech-stack{gap:48px;}
   .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
   .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}
