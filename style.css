@@ -124,15 +124,15 @@ a{text-decoration:none;color:inherit;}
 .hts-tag:hover{border-color:var(--gold2);color:var(--white);}
 
 /* ============================================================
-   CHARACTERS PAGE — 2B (4 narrative blocks)
-   main : support = visual weight hierarchy (support ~ 30-40%)
+   CHARACTERS PAGE — 2B (44 rebalance)
+   Order: Hero / Process / Final Render / Technical Focus
    ============================================================ */
 .c-section{padding:var(--sp-y) var(--sp-x);}
 .c-section > *{max-width:var(--maxw);margin-left:auto;margin-right:auto;}
 .c-section + .c-section{border-top:1px solid var(--border);}
 .c-sec-label{font-size:7px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:48px;}
 
-/* 01 HERO — main image strong, max 3 thumbs */
+/* 01 HERO — single strong main image, no support rail */
 .c-hero-sec{padding-top:calc(var(--sp-y) * 1.2);}
 .c-hero-grid{display:grid;grid-template-columns:2fr 3fr;gap:72px;align-items:start;}
 .c-hero-left{display:flex;flex-direction:column;gap:0;}
@@ -149,55 +149,16 @@ a{text-decoration:none;color:inherit;}
 .cm-k{font-size:6px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 .study-b{display:inline-block;padding:4px 10px;border:1px solid var(--border2);font-size:6px;letter-spacing:.15em;color:var(--dim);}
 .c-hero-right{display:flex;flex-direction:column;gap:0;}
-.c-hero-main-img{width:100%;aspect-ratio:3/4;max-height:74vh;}
+/* Hero main image now single — fills the right column, no thumbs below */
+.c-hero-main-img{width:100%;aspect-ratio:3/4;max-height:80vh;}
 .c-hero-main-img .iw{height:100%;}
-.c-hero-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);height:84px;}
-.ct{position:relative;border-right:1px solid var(--border);cursor:pointer;overflow:hidden;}
-.ct:last-child{border-right:none;}
-.ct.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);}
-.ct-lbl{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-size:6px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;z-index:2;}
 
-/* 02 FINAL RENDER — 1 main (strong) + 3 support rail (weak, natural ratio) */
-.c-fr-grid{display:grid;grid-template-columns:2.2fr 1fr;gap:var(--gap);margin-bottom:18px;align-items:start;}
-.c-fr-main{aspect-ratio:4/5;}
-.c-fr-main .iw{height:100%;}
-.c-fr-rail{display:grid;grid-template-rows:repeat(3,1fr);gap:var(--gap);height:100%;}
-.c-fr-support{}
-.c-fr-support .iw{width:100%;aspect-ratio:4/3;}
-.c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
-
-/* 03 TECHNICAL FOCUS — row layout: visual (left) + body (right) */
-.c-tech-stack{display:flex;flex-direction:column;gap:56px;}
-.c-tech-row{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;}
-.c-tech-row:nth-child(even){grid-template-columns:1fr 1.4fr;}
-.c-tech-row:nth-child(even) .c-tech-visual{order:2;}
-.c-tech-visual{min-width:0;}
-.c-tech-single{aspect-ratio:4/3;}
-.c-tech-single .iw{height:100%;}
-.c-tech-body{display:flex;flex-direction:column;gap:10px;}
-.c-tech-label{font-size:7px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;}
-.c-tech-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);font-weight:300;}
-.c-tech-desc{font-size:8px;color:var(--mid);line-height:1.9;max-width:320px;}
-
-/* Texture Set — semantic 4-image, compact mini-grid (NOT hero-level) */
-.c-tex-set{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
-.c-tex-item{display:flex;flex-direction:column;gap:5px;}
-.c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.92;}
-.c-tex-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
-
-/* LookDev Set — representative slightly stronger + 2 small compare */
-.c-ld-set{display:flex;flex-direction:column;gap:12px;}
-.c-ld-main{aspect-ratio:4/3;}
-.c-ld-main .iw{height:100%;}
-.c-ld-subs{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.c-ld-subs .iw{width:100%;aspect-ratio:4/3;opacity:.88;}
-
-/* 04 PROCESS — weakest section */
-.c-proc-sec .c-sec-label{opacity:.85;}
+/* 02 PROCESS — moved to 2nd (recruiter-priority workflow) */
+.c-proc-sec .c-sec-label{}
 .c-proc-intro{margin-bottom:36px;}
 .c-proc-desc{font-size:9px;color:var(--mid);line-height:1.9;max-width:480px;}
 .c-proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);margin-bottom:32px;}
-.c-proc-card{background:var(--surface);padding:24px 20px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--border);}
+.c-proc-card{background:var(--surface);padding:26px 22px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--border);}
 .c-proc-primary{border-color:var(--gold2);background:var(--surface2);}
 .ps-num{font-size:7px;color:var(--gold);letter-spacing:.2em;}
 .ps-ttl{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--white);font-weight:300;}
@@ -205,6 +166,49 @@ a{text-decoration:none;color:inherit;}
 .c-tools-bar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
 .sw-lbl{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
+
+/* 03 FINAL RENDER — main + support rail. Priority: Full Body > View > Eye */
+.c-fr-grid{display:grid;grid-template-columns:2fr 1.15fr;gap:var(--gap);margin-bottom:18px;align-items:stretch;}
+.c-fr-main{aspect-ratio:4/5;}
+.c-fr-main .iw{height:100%;}
+/* support rail: Full Body largest, View medium, Eye smallest (row spans) */
+.c-fr-rail{display:grid;grid-template-rows:1.5fr 1.2fr 1fr;gap:var(--gap);}
+.c-fr-support .iw{width:100%;height:100%;}
+.c-fr-fullbody .iw{aspect-ratio:auto;}
+.c-fr-view .iw{aspect-ratio:auto;}
+.c-fr-eye .iw{aspect-ratio:auto;}
+.c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
+
+/* 04 TECHNICAL FOCUS */
+.c-tech-stack{display:flex;flex-direction:column;gap:56px;}
+.c-tech-row{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;}
+.c-tech-row:nth-child(even){grid-template-columns:1fr 1.4fr;}
+.c-tech-row:nth-child(even) .c-tech-visual{order:2;}
+.c-tech-visual{min-width:0;}
+.c-tech-body{display:flex;flex-direction:column;gap:10px;}
+.c-tech-label{font-size:7px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;}
+.c-tech-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);font-weight:300;}
+.c-tech-desc{font-size:8px;color:var(--mid);line-height:1.9;max-width:320px;}
+
+/* Topology — Front / Back の2枠 */
+.c-topo-set{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.c-topo-item{display:flex;flex-direction:column;gap:6px;}
+.c-topo-item .iw{width:100%;aspect-ratio:3/4;}
+.c-topo-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
+
+/* Texture — ORM / Diffuse / Normal / SSS Mask の2x2 compact mini-grid */
+.c-tex-set{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.c-tex-item{display:flex;flex-direction:column;gap:5px;}
+.c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.92;}
+.c-tex-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
+
+/* Lighting Verification — main + 2 sub, sub伸ばし空枠なし */
+.c-ld-set{display:flex;flex-direction:column;gap:12px;}
+.c-ld-main{aspect-ratio:16/9;}
+.c-ld-main .iw{height:100%;}
+.c-ld-subs{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.c-ld-sub{aspect-ratio:4/3;}
+.c-ld-sub .iw{height:100%;opacity:.9;}
 
 /* WORK */
 .work-list{display:flex;flex-direction:column;}
@@ -276,26 +280,26 @@ a{text-decoration:none;color:inherit;}
 .lb-ctr{font-size:7px;color:var(--dim);letter-spacing:.1em;}
 
 /* ============================================================
-   TABLET — stack main → support, no tall-narrow
+   TABLET
    ============================================================ */
 @media (max-width:1024px){
   :root{--sp-x:56px;--sp-y:72px;--gap:28px;}
 
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
-  .c-hero-main-img{aspect-ratio:3/4;max-height:64vh;}
+  .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
 
-  /* Final Render: main on top, support rail becomes horizontal row of 3 */
+  /* Process */
+  .c-proc-grid{grid-template-columns:repeat(2,1fr);}
+
+  /* Final Render: main on top, support rail horizontal (keep size order) */
   .c-fr-grid{grid-template-columns:1fr;gap:var(--gap);}
   .c-fr-main{aspect-ratio:4/5;}
-  .c-fr-rail{grid-template-rows:none;grid-template-columns:repeat(3,1fr);}
-  .c-fr-support .iw{aspect-ratio:4/3;}
+  .c-fr-rail{grid-template-rows:none;grid-template-columns:1.5fr 1.2fr 1fr;}
+  .c-fr-support .iw{aspect-ratio:3/4;}
 
   /* Technical: stack visual over body */
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
   .c-tech-row:nth-child(even) .c-tech-visual{order:0;}
-
-  /* Process */
-  .c-proc-grid{grid-template-columns:repeat(2,1fr);}
 
   /* Work / About / Research */
   .work-item{grid-template-columns:1fr;}
@@ -311,7 +315,7 @@ a{text-decoration:none;color:inherit;}
 }
 
 /* ============================================================
-   MOBILE — 1 column, REDUCE visual count (not shrink)
+   MOBILE — 1 column, reduce visual count (not shrink)
    ============================================================ */
 @media (max-width:600px){
   :root{--sp-x:24px;--sp-y:56px;--gap:24px;}
@@ -320,20 +324,22 @@ a{text-decoration:none;color:inherit;}
   .hts-group{border-right:none;border-bottom:1px solid var(--border);}
   .nav-tiles{grid-template-columns:1fr;}
 
-  /* Hero: keep main + 3 thumbs (thumbs are small + meaningful) */
+  /* Hero: single main image only */
   .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
 
-  /* Final Render: main + 2 support only (hide 3rd to reduce count) */
-  .c-fr-rail{grid-template-columns:1fr 1fr;}
-  .c-fr-support:nth-child(3){display:none;}
-  .c-fr-support .iw{aspect-ratio:4/3;}
-
-  /* Technical: keep semantic sets; Texture stays 2x2 mini-grid (not hero) */
-  .c-tech-stack{gap:48px;}
-  .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}
-  /* LookDev: representative main + hide the 2 small compares on mobile */
-  .c-ld-subs{display:none;}
-
-  /* Process: single column */
+  /* Process */
   .c-proc-grid{grid-template-columns:1fr;}
+
+  /* Final Render: keep priority order, stack vertically; drop nothing here
+     but keep Full Body largest. View + Eye share a row to reduce height */
+  .c-fr-rail{grid-template-rows:none;grid-template-columns:1fr 1fr;}
+  .c-fr-fullbody{grid-column:1 / -1;}
+  .c-fr-support .iw{aspect-ratio:4/3;}
+  .c-fr-fullbody .iw{aspect-ratio:4/5;}
+
+  /* Technical: Texture stays 2x2; Topology stays 2-up; LookDev subs hidden */
+  .c-tech-stack{gap:48px;}
+  .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
+  .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .c-ld-subs{display:none;}
 }
