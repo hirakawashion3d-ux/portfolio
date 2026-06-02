@@ -155,7 +155,7 @@
   </div>
 </div>
 
-<!-- CHARACTERS — 2B (46 QA: Final Render rebalanced 2026-06-02) -->
+<!-- CHARACTERS — 2B (48: Beauty Main removed, Final Render = 3 frames only) -->
 <div class="page" id="page-characters">
 
   <!-- 01 HERO -->
@@ -227,41 +227,35 @@
   </section>
 
   <!-- 03 FINAL RENDER
-       46 QA:
-       - Beauty Main: 1fr (さらに縮小) / support rail: 1.8fr (幅拡大)
-       - support 3枠 = 全身(fullbody_front, 2fr最大) / 顔(face_front, 1.4fr中) / 目アップ(eye_detail, 0.9fr最小)
-       - Alt不使用、Viewを顔より優先しない -->
+       48: Beauty Main完全削除（外枠・レイアウト領域ごと）
+       Final Render = Full Body / Face / Eye Detail の3枠のみ
+       Full Body(最大) > Face(中) > Eye Detail(最小) -->
   <section class="c-section">
     <div class="c-sec-label">03 — Final Render</div>
-    <div class="c-fr-grid rv">
-      <div class="c-fr-main">
-        <div class="iw lb-t" style="height:100%" data-cap="Beauty Main · Cinematic Lighting" data-group="gallery">
-          <img src="images/2b/beauty_main.jpg" alt="Beauty Main">
+    <div class="c-fr-3col rv">
+      <div class="c-fr-item c-fr-fullbody">
+        <div class="iw lb-t" style="height:100%" data-cap="Full Body" data-group="gallery">
+          <img src="images/2b/fullbody_front.jpg" alt="Full Body">
           <div class="ov"></div>
         </div>
+        <div class="c-fr-lbl">Full Body</div>
       </div>
-      <div class="c-fr-rail">
-        <div class="c-fr-support c-fr-fullbody">
-          <div class="iw lb-t" style="height:100%" data-cap="Full Body" data-group="gallery">
-            <img src="images/2b/fullbody_front.jpg" alt="Full Body">
-            <div class="ov"></div>
-          </div>
+      <div class="c-fr-item c-fr-face">
+        <div class="iw lb-t" style="height:100%" data-cap="Face Close-up" data-group="gallery">
+          <img src="images/2b/face_front.jpg" alt="Face">
+          <div class="ov"></div>
         </div>
-        <div class="c-fr-support c-fr-face">
-          <div class="iw lb-t" style="height:100%" data-cap="Face Close-up" data-group="gallery">
-            <img src="images/2b/face_front.jpg" alt="Face">
-            <div class="ov"></div>
-          </div>
+        <div class="c-fr-lbl">Face</div>
+      </div>
+      <div class="c-fr-item c-fr-eye">
+        <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="gallery">
+          <img src="images/2b/eye_detail.jpg" alt="Eye Detail">
+          <div class="ov"></div>
         </div>
-        <div class="c-fr-support c-fr-eye">
-          <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="gallery">
-            <img src="images/2b/eye_detail.jpg" alt="Eye Detail">
-            <div class="ov"></div>
-          </div>
-        </div>
+        <div class="c-fr-lbl">Eye Detail</div>
       </div>
     </div>
-    <div class="c-fr-caption">Cinematic lighting · PBR · UE5 Lumen · ACES CG</div>
+    <div class="c-fr-caption">PBR · UE5 Lumen · ACES CG</div>
   </section>
 
   <!-- 04 TECHNICAL FOCUS -->
@@ -299,8 +293,6 @@
         </div>
       </div>
 
-      <!-- Lighting Verification
-           46 QA: 下2枚をさらに縦長に (aspect-ratio 1/2) -->
       <div class="c-tech-row">
         <div class="c-tech-visual">
           <div class="c-ld-set">
