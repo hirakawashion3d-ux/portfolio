@@ -39,7 +39,7 @@ function reveal(){
 window.addEventListener('scroll',reveal,{passive:true});
 reveal();
 
-// LIGHTBOX — 53: background click to close, improved nav visibility
+// LIGHTBOX
 const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCtr=document.getElementById('lbCtr');
 let items=[],idx=0;
 document.addEventListener('click',e=>{
@@ -58,7 +58,6 @@ function closeLb(){lb.classList.remove('open');}
 document.getElementById('lbClose').addEventListener('click',closeLb);
 document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();idx=(idx-1+items.length)%items.length;show();});
 document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();idx=(idx+1)%items.length;show();});
-// background click to close (53: 戻りやすさ改善)
 lb.addEventListener('click',e=>{if(e.target===lb||e.target===lb.querySelector('.lb-inner'))closeLb();});
 document.querySelector('.lb-inner').addEventListener('click',e=>{if(e.target===document.querySelector('.lb-inner'))closeLb();});
 document.addEventListener('keydown',e=>{

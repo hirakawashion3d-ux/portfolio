@@ -125,8 +125,8 @@ a{text-decoration:none;color:inherit;}
 
 /* ============================================================
    CHARACTERS PAGE — 2B
-   53: Face first / landscape / Full Body + Eye Detail bottom row
-   48: Beauty Main removed
+   54: FR width contained / Texture 4-group
+   53: Face first / landscape
    49: LookDev locked
    ============================================================ */
 .c-section{padding:var(--sp-y) var(--sp-x);}
@@ -169,15 +169,14 @@ a{text-decoration:none;color:inherit;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
 /* 03 FINAL RENDER
-   53 Layout (LOCKED after acceptance):
-   [ Face 16/7 — full width landscape, large ]
-   [ Full Body 2/3 | Eye Detail 1/1 ]
-   Regression防止: 比率は固定。上限サイズ管理あり。
-   Beauty Main: 削除済み。第4要素なし。 */
+   54: c-fr-stack幅 = section幅
+       c-fr-bottom-rowはc-fr-face-rowと同幅（overflow隠し）
+       Full Body 2/3 / Eye Detail 1/1 — サイズ固定ロック */
 .c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;}
 .c-fr-face-row{width:100%;aspect-ratio:16/7;}
 .c-fr-face-row .iw{height:100%;}
-.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
+/* 下段はFace幅内に収める: grid-template-columnsを1fr 1frにし、幅はstackと同じ */
+.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);width:100%;}
 .c-fr-bottom-left{aspect-ratio:2/3;}
 .c-fr-bottom-left .iw{height:100%;}
 .c-fr-bottom-right{aspect-ratio:1/1;}
@@ -201,11 +200,18 @@ a{text-decoration:none;color:inherit;}
 .c-topo-item .iw{width:100%;aspect-ratio:3/4;}
 .c-topo-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
-/* Texture */
-.c-tex-set{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
-.c-tex-item{display:flex;flex-direction:column;gap:5px;}
-.c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.92;}
-.c-tex-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
+/* Texture — 54: 4グループ横並び (Face / Body / Cloth Upper / Cloth Lower)
+   各グループに Diffuse / Normal / ORM / SSS Mask の2×2 mini-grid */
+.c-tex-row{grid-template-columns:1fr !important;}
+.c-tex-row .c-tech-visual{order:0 !important;}
+.c-tex-visual-wide{width:100%;}
+.c-tex-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.c-tex-group{display:flex;flex-direction:column;gap:10px;}
+.c-tex-group-label{font-size:7px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--border2);}
+.c-tex-set{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.c-tex-item{display:flex;flex-direction:column;gap:4px;}
+.c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.9;}
+.c-tex-lbl{font-size:6px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;}
 
 /* Lighting Verification — LOCKED (49)
    Accepted State: c-ld-sub aspect-ratio 3/4
@@ -274,7 +280,7 @@ a{text-decoration:none;color:inherit;}
 .exp-role{font-size:7px;color:var(--gold);letter-spacing:.08em;}
 .exp-note{font-size:7px;color:var(--dim);}
 
-/* LIGHTBOX — 53: ESC/閉じるボタンを大きく、背景クリックで閉じる（既存動作を維持・強化） */
+/* LIGHTBOX */
 .lb{position:fixed;inset:0;z-index:8000;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;}
 .lb.open{opacity:1;visibility:visible;}
 .lb-inner{position:relative;max-width:90vw;}
@@ -295,9 +301,10 @@ a{text-decoration:none;color:inherit;}
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
-  /* Final Render: tablet でも同じ構成を維持 */
   .c-fr-face-row{aspect-ratio:16/7;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr;}
+  /* Texture: tabletでは2列2グループずつ */
+  .c-tex-groups{grid-template-columns:repeat(2,1fr);}
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
   .c-tech-row:nth-child(even) .c-tech-visual{order:0;}
   .work-item{grid-template-columns:1fr;}
@@ -322,12 +329,12 @@ a{text-decoration:none;color:inherit;}
   .nav-tiles{grid-template-columns:1fr;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
   .c-proc-grid{grid-template-columns:1fr;}
-  /* Final Render mobile: Face全幅維持、下段は縦積み */
   .c-fr-face-row{aspect-ratio:4/3;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr;}
+  /* Texture: mobileでは1列 */
+  .c-tex-groups{grid-template-columns:1fr;}
   .c-tech-stack{gap:48px;}
   .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
-  .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}
   .c-ld-subs{grid-template-columns:1fr 1fr;gap:12px;}
   .c-ld-sub{aspect-ratio:3/4;}
 }

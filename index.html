@@ -155,7 +155,7 @@
   </div>
 </div>
 
-<!-- CHARACTERS — 2B (53: Face first / landscape / bottom row: Full Body + Eye Detail) -->
+<!-- CHARACTERS — 2B (54: FR width contained / Texture 4-group) -->
 <div class="page" id="page-characters">
 
   <!-- 01 HERO -->
@@ -227,8 +227,8 @@
   </section>
 
   <!-- 03 FINAL RENDER
-       53: Face最上段・横長大 / 下段: Full Body(左) + Eye Detail(右)
-       Layout: [ Face 16/7 full-width ] / [ Full Body 2/3 | Eye Detail 1/1 ] -->
+       54: Face上段 + 下段(Full Body / Eye Detail)をFace幅内に収める
+       c-fr-stack で縦積み。c-fr-bottom-rowはc-fr-face-row幅と同幅。 -->
   <section class="c-section">
     <div class="c-sec-label">03 — Final Render</div>
     <div class="c-fr-stack rv">
@@ -261,6 +261,7 @@
     <div class="c-sec-label">04 — Technical Focus</div>
     <div class="c-tech-stack rv">
 
+      <!-- Topology -->
       <div class="c-tech-row">
         <div class="c-tech-visual">
           <div class="c-topo-set">
@@ -275,19 +276,52 @@
         </div>
       </div>
 
-      <div class="c-tech-row">
-        <div class="c-tech-visual">
-          <div class="c-tex-set">
-            <div class="c-tex-item"><div class="iw lb-t" data-cap="Diffuse" data-group="tech"><img src="images/2b/tex_albedo.jpg" alt="Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
-            <div class="c-tex-item"><div class="iw lb-t" data-cap="Normal" data-group="tech"><img src="images/2b/tex_normal.jpg" alt="Normal"></div><span class="c-tex-lbl">Normal</span></div>
-            <div class="c-tex-item"><div class="iw lb-t" data-cap="ORM (AO / Roughness / Metallic)" data-group="tech"><img src="images/2b/tex_roughness.jpg" alt="ORM"></div><span class="c-tex-lbl">ORM</span></div>
-            <div class="c-tex-item"><div class="iw lb-t" data-cap="SSS Mask" data-group="tech"><img src="images/2b/tex_sss.jpg" alt="SSS Mask"></div><span class="c-tex-lbl">SSS Mask</span></div>
+      <!-- Texture — 54: 4 groups (Face / Body / Cloth Upper / Cloth Lower) 横並び -->
+      <div class="c-tech-row c-tex-row">
+        <div class="c-tech-visual c-tex-visual-wide">
+          <div class="c-tex-groups">
+            <div class="c-tex-group">
+              <div class="c-tex-group-label">Face</div>
+              <div class="c-tex-set">
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Face — Diffuse" data-group="tech"><img src="images/2b/tex_albedo.jpg" alt="Face Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Face — Normal" data-group="tech"><img src="images/2b/tex_normal.jpg" alt="Face Normal"></div><span class="c-tex-lbl">Normal</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Face — ORM" data-group="tech"><img src="images/2b/tex_roughness.jpg" alt="Face ORM"></div><span class="c-tex-lbl">ORM</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Face — SSS Mask" data-group="tech"><img src="images/2b/tex_sss.jpg" alt="Face SSS"></div><span class="c-tex-lbl">SSS</span></div>
+              </div>
+            </div>
+            <div class="c-tex-group">
+              <div class="c-tex-group-label">Body</div>
+              <div class="c-tex-set">
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Body — Diffuse" data-group="tech"><img src="images/2b/tex_body_albedo.jpg" alt="Body Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Body — Normal" data-group="tech"><img src="images/2b/tex_body_normal.jpg" alt="Body Normal"></div><span class="c-tex-lbl">Normal</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Body — ORM" data-group="tech"><img src="images/2b/tex_body_roughness.jpg" alt="Body ORM"></div><span class="c-tex-lbl">ORM</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Body — SSS Mask" data-group="tech"><img src="images/2b/tex_body_sss.jpg" alt="Body SSS"></div><span class="c-tex-lbl">SSS</span></div>
+              </div>
+            </div>
+            <div class="c-tex-group">
+              <div class="c-tex-group-label">Cloth Upper</div>
+              <div class="c-tex-set">
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — Diffuse" data-group="tech"><img src="images/2b/tex_cloth_upper_albedo.jpg" alt="Cloth Upper Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — Normal" data-group="tech"><img src="images/2b/tex_cloth_upper_normal.jpg" alt="Cloth Upper Normal"></div><span class="c-tex-lbl">Normal</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — ORM" data-group="tech"><img src="images/2b/tex_cloth_upper_roughness.jpg" alt="Cloth Upper ORM"></div><span class="c-tex-lbl">ORM</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — SSS Mask" data-group="tech"><img src="images/2b/tex_cloth_upper_sss.jpg" alt="Cloth Upper SSS"></div><span class="c-tex-lbl">SSS</span></div>
+              </div>
+            </div>
+            <div class="c-tex-group">
+              <div class="c-tex-group-label">Cloth Lower</div>
+              <div class="c-tex-set">
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — Diffuse" data-group="tech"><img src="images/2b/tex_cloth_lower_albedo.jpg" alt="Cloth Lower Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — Normal" data-group="tech"><img src="images/2b/tex_cloth_lower_normal.jpg" alt="Cloth Lower Normal"></div><span class="c-tex-lbl">Normal</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — ORM" data-group="tech"><img src="images/2b/tex_cloth_lower_roughness.jpg" alt="Cloth Lower ORM"></div><span class="c-tex-lbl">ORM</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — SSS Mask" data-group="tech"><img src="images/2b/tex_cloth_lower_sss.jpg" alt="Cloth Lower SSS"></div><span class="c-tex-lbl">SSS</span></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="c-tech-body">
           <div class="c-tech-label">Texture</div>
           <div class="c-tech-title">PBR Material Suite</div>
-          <div class="c-tech-desc">4096px · Unreal想定のパッキング。ORMはAO / Roughness / Metallicの複合、SSSはMaskとして運用。ACEScg。</div>
+          <div class="c-tech-desc">4096px · 部位別4セット（Face / Body / Cloth Upper / Cloth Lower）。各セットにDiffuse / Normal / ORM / SSS Maskを収録。ACEScg。</div>
         </div>
       </div>
 
