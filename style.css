@@ -169,23 +169,21 @@ a{text-decoration:none;color:inherit;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
 /* 03 FINAL RENDER
-   58:
-   - c-fr-stackにoverflow:hiddenでFace幅からはみ出しを封封
-   - 下段にmax-width:100%とoverflow:hiddenでFace幅内に確実に収める
-   - Eye Detailを 0.45fr → 0.3fr にさらに縮小 */
+   59:
+   - Eye Detail削除。Face + Full Body 3枠の安定構成
+   - 下段3列 = 1fr 1fr 1fr でFace幅に整列
+   - c-fr-eye定義削除 */
 .c-fr-section{scroll-margin-top:calc(var(--nav-h) + var(--tab-h) + 16px);}
 .c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;overflow:hidden;}
 .c-fr-face-row{width:100%;aspect-ratio:16/7;}
 .c-fr-face-row .iw{height:100%;}
-.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr 0.3fr;gap:var(--gap);width:100%;max-width:100%;overflow:hidden;}
+.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);width:100%;max-width:100%;overflow:hidden;}
 .c-fr-body-front{aspect-ratio:2/3;}
 .c-fr-body-front .iw{height:100%;}
 .c-fr-body-back{aspect-ratio:2/3;}
 .c-fr-body-back .iw{height:100%;}
 .c-fr-body-back34{aspect-ratio:2/3;}
 .c-fr-body-back34 .iw{height:100%;}
-.c-fr-eye{aspect-ratio:1/1;}
-.c-fr-eye .iw{height:100%;}
 .c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 
 /* 04 TECHNICAL FOCUS */
@@ -199,10 +197,11 @@ a{text-decoration:none;color:inherit;}
 .c-tech-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);font-weight:300;}
 .c-tech-desc{font-size:8px;color:var(--mid);line-height:1.9;max-width:320px;}
 
-/* Topology */
+/* Topology
+   59: Edge Flow 2枠を少し大きく (3/4 → 2/3) */
 .c-topo-set{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .c-topo-item{display:flex;flex-direction:column;gap:6px;}
-.c-topo-item .iw{width:100%;aspect-ratio:3/4;}
+.c-topo-item .iw{width:100%;aspect-ratio:2/3;}
 .c-topo-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
 /* Texture — 54: 4グループ横並び (Face / Body / Cloth Upper / Cloth Lower)
@@ -307,7 +306,7 @@ a{text-decoration:none;color:inherit;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
   .c-fr-face-row{aspect-ratio:16/7;}
-  .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr 0.3fr;}
+  .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr;}
   /* Texture: tabletでは2列2グループずつ */
   .c-tex-groups{grid-template-columns:repeat(2,1fr);}
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
