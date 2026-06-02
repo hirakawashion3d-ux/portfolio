@@ -11,8 +11,7 @@ window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loade
 window.addEventListener('scroll',()=>{
   document.getElementById('spfill').style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
 },{passive:true});
-let lastY=0;const nav=document.getElementById('topNav');
-window.addEventListener('scroll',()=>{const y=window.scrollY;nav.classList.toggle('hide',y>lastY&&y>100);lastY=y;},{passive:true});
+// top-nav: always visible (60: hide on scroll removed per user intent)
 
 // TABS
 const pages={};document.querySelectorAll('.page').forEach(p=>pages[p.id.replace('page-','')]=p);
