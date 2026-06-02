@@ -227,9 +227,10 @@
   </section>
 
   <!-- 03 FINAL RENDER
-       56: Face上段(16/7) + 下段3列(Full Body Front / Full Body Back 3/4 / Eye Detail)
-       Claude判断レイアウト: Face横長最上段 → 下段でFull Body前後 + Eye Detailを補足 -->
-  <section class="c-section">
+       57: scroll-margin-topでナビゲーションバーとの干渉回避
+           Full Body 3枠 (Front / Back / Back 3/4) 明確分鈳
+           Eye Detailをスケール抑制 -->
+  <section class="c-section c-fr-section">
     <div class="c-sec-label">03 — Final Render</div>
     <div class="c-fr-stack rv">
       <div class="c-fr-face-row">
@@ -246,6 +247,12 @@
           </div>
         </div>
         <div class="c-fr-body-back">
+          <div class="iw lb-t" style="height:100%" data-cap="Full Body — Back" data-group="gallery">
+            <img src="images/2b/fullbody_back.jpg" alt="Full Body Back">
+            <div class="ov"></div>
+          </div>
+        </div>
+        <div class="c-fr-body-back34">
           <div class="iw lb-t" style="height:100%" data-cap="Full Body — Back 3/4" data-group="gallery">
             <img src="images/2b/fullbody_back34.jpg" alt="Full Body Back 3/4">
             <div class="ov"></div>
