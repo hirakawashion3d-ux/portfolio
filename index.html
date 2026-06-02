@@ -227,8 +227,8 @@
   </section>
 
   <!-- 03 FINAL RENDER
-       54: Face上段 + 下段(Full Body / Eye Detail)をFace幅内に収める
-       c-fr-stack で縦積み。c-fr-bottom-rowはc-fr-face-row幅と同幅。 -->
+       56: Face上段(16/7) + 下段3列(Full Body Front / Full Body Back 3/4 / Eye Detail)
+       Claude判断レイアウト: Face横長最上段 → 下段でFull Body前後 + Eye Detailを補足 -->
   <section class="c-section">
     <div class="c-sec-label">03 — Final Render</div>
     <div class="c-fr-stack rv">
@@ -239,13 +239,19 @@
         </div>
       </div>
       <div class="c-fr-bottom-row">
-        <div class="c-fr-bottom-left">
-          <div class="iw lb-t" style="height:100%" data-cap="Full Body" data-group="gallery">
-            <img src="images/2b/fullbody_front.jpg" alt="Full Body">
+        <div class="c-fr-body-front">
+          <div class="iw lb-t" style="height:100%" data-cap="Full Body — Front" data-group="gallery">
+            <img src="images/2b/fullbody_front.jpg" alt="Full Body Front">
             <div class="ov"></div>
           </div>
         </div>
-        <div class="c-fr-bottom-right">
+        <div class="c-fr-body-back">
+          <div class="iw lb-t" style="height:100%" data-cap="Full Body — Back 3/4" data-group="gallery">
+            <img src="images/2b/fullbody_back34.jpg" alt="Full Body Back 3/4">
+            <div class="ov"></div>
+          </div>
+        </div>
+        <div class="c-fr-eye">
           <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="gallery">
             <img src="images/2b/eye_detail.png" alt="Eye Detail">
             <div class="ov"></div>

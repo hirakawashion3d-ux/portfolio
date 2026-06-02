@@ -169,18 +169,20 @@ a{text-decoration:none;color:inherit;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
 /* 03 FINAL RENDER
-   54: c-fr-stack幅 = section幅
-       c-fr-bottom-rowはc-fr-face-rowと同幅（overflow隠し）
-       Full Body 2/3 / Eye Detail 1/1 — サイズ固定ロック */
+   56 Claude判断レイアウト:
+   上段: Face 16/7 横長全幅
+   下段: Full Body Front(2/3) | Full Body Back 3/4(2/3) | Eye Detail(1/1 小さめ)
+   grid-template-columns: 1fr 1fr 0.7fr で Eye Detail を相対的に小さく */
 .c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;}
 .c-fr-face-row{width:100%;aspect-ratio:16/7;}
 .c-fr-face-row .iw{height:100%;}
-/* 下段はFace幅内に収める: grid-template-columnsを1fr 1frにし、幅はstackと同じ */
-.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);width:100%;}
-.c-fr-bottom-left{aspect-ratio:2/3;}
-.c-fr-bottom-left .iw{height:100%;}
-.c-fr-bottom-right{aspect-ratio:1/1;}
-.c-fr-bottom-right .iw{height:100%;}
+.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 0.7fr;gap:var(--gap);width:100%;}
+.c-fr-body-front{aspect-ratio:2/3;}
+.c-fr-body-front .iw{height:100%;}
+.c-fr-body-back{aspect-ratio:2/3;}
+.c-fr-body-back .iw{height:100%;}
+.c-fr-eye{aspect-ratio:1/1;}
+.c-fr-eye .iw{height:100%;}
 .c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 
 /* 04 TECHNICAL FOCUS */
@@ -302,7 +304,7 @@ a{text-decoration:none;color:inherit;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
   .c-fr-face-row{aspect-ratio:16/7;}
-  .c-fr-bottom-row{grid-template-columns:1fr 1fr;}
+  .c-fr-bottom-row{grid-template-columns:1fr 1fr 0.7fr;}
   /* Texture: tabletでは2列2グループずつ */
   .c-tex-groups{grid-template-columns:repeat(2,1fr);}
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
