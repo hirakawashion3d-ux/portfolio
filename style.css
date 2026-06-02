@@ -179,10 +179,10 @@ a{text-decoration:none;color:inherit;}
 .c-fr-left{aspect-ratio:2/3;}
 .c-fr-left .iw{height:100%;}
 .c-fr-right{display:flex;flex-direction:column;gap:var(--gap);}
-/* 51: Face larger (2/3), Eye Detail smaller (3/4) — clearer hierarchy */
-.c-fr-right-top{aspect-ratio:2/3;}
+/* 52: Face landscape (4/3), Eye Detail compact square (1/1) — natural scale */
+.c-fr-right-top{aspect-ratio:4/3;}
 .c-fr-right-top .iw{height:100%;}
-.c-fr-right-bottom{aspect-ratio:3/4;}
+.c-fr-right-bottom{aspect-ratio:1/1;}
 .c-fr-right-bottom .iw{height:100%;}
 .c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 
