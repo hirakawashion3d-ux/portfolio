@@ -155,7 +155,7 @@
   </div>
 </div>
 
-<!-- CHARACTERS — 2B (48+49: Final Render 3 frames / LookDev locked to 3/4) -->
+<!-- CHARACTERS — 2B (50: Final Render left/right stack) -->
 <div class="page" id="page-characters">
 
   <!-- 01 HERO -->
@@ -226,30 +226,31 @@
     </div>
   </section>
 
-  <!-- 03 FINAL RENDER (48: Beauty Main removed, 3 frames only) -->
+  <!-- 03 FINAL RENDER
+       50: 左 Full Body(最大) / 右: Face(上) + Eye Detail(下) 縦積み
+       視線: Full Body → Face → Eye Detail -->
   <section class="c-section">
     <div class="c-sec-label">03 — Final Render</div>
-    <div class="c-fr-3col rv">
-      <div class="c-fr-item c-fr-fullbody">
+    <div class="c-fr-layout rv">
+      <div class="c-fr-left">
         <div class="iw lb-t" style="height:100%" data-cap="Full Body" data-group="gallery">
           <img src="images/2b/fullbody_front.jpg" alt="Full Body">
           <div class="ov"></div>
         </div>
-        <div class="c-fr-lbl">Full Body</div>
       </div>
-      <div class="c-fr-item c-fr-face">
-        <div class="iw lb-t" style="height:100%" data-cap="Face Close-up" data-group="gallery">
-          <img src="images/2b/face_front.jpg" alt="Face">
-          <div class="ov"></div>
+      <div class="c-fr-right">
+        <div class="c-fr-right-top">
+          <div class="iw lb-t" style="height:100%" data-cap="Face Close-up" data-group="gallery">
+            <img src="images/2b/face_front.jpg" alt="Face">
+            <div class="ov"></div>
+          </div>
         </div>
-        <div class="c-fr-lbl">Face</div>
-      </div>
-      <div class="c-fr-item c-fr-eye">
-        <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="gallery">
-          <img src="images/2b/eye_detail.jpg" alt="Eye Detail">
-          <div class="ov"></div>
+        <div class="c-fr-right-bottom">
+          <div class="iw lb-t" style="height:100%" data-cap="Eye Detail" data-group="gallery">
+            <img src="images/2b/eye_detail.jpg" alt="Eye Detail">
+            <div class="ov"></div>
+          </div>
         </div>
-        <div class="c-fr-lbl">Eye Detail</div>
       </div>
     </div>
     <div class="c-fr-caption">PBR · UE5 Lumen · ACES CG</div>
@@ -290,8 +291,7 @@
         </div>
       </div>
 
-      <!-- Lighting Verification — LOCKED (49: ちょうどよかったサイズに戻す)
-           c-ld-sub aspect-ratio 3/4 (1/2 は過剰縦長だったため戻す) -->
+      <!-- Lighting Verification — LOCKED (49) -->
       <div class="c-tech-row">
         <div class="c-tech-visual">
           <div class="c-ld-set">
