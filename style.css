@@ -168,15 +168,17 @@ a{text-decoration:none;color:inherit;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
 /* 03 FINAL RENDER
-   59:
-   - Eye Detail削除。Face + Full Body 3枠の安定構成
-   - 下段3列 = 1fr 1fr 1fr でFace幅に整列
-   - c-fr-eye定義削除 */
+   61 Current Spec:
+   - Face最上段 16/7横長
+   - 下段 = Full Body Front / Back / Back 3/4 ノみ (1fr 1fr 1fr)
+   - 下段3枠はFace幅内に収めるが右端を切らない
+   - 61 Regression Fix: overflow:hidden制御を削除。単純にwidth:100%で吴齐
+   - Eye Detailなし。Beauty Mainなし。 */
 .c-fr-section{scroll-margin-top:calc(var(--nav-h) + var(--tab-h) + 16px);}
-.c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;overflow:hidden;}
+.c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;}
 .c-fr-face-row{width:100%;aspect-ratio:16/7;}
 .c-fr-face-row .iw{height:100%;}
-.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);width:100%;max-width:100%;overflow:hidden;}
+.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);width:100%;}
 .c-fr-body-front{aspect-ratio:2/3;}
 .c-fr-body-front .iw{height:100%;}
 .c-fr-body-back{aspect-ratio:2/3;}
