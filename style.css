@@ -125,7 +125,7 @@ a{text-decoration:none;color:inherit;}
 
 /* ============================================================
    CHARACTERS PAGE — 2B
-   50: Final Render left/right stack
+   53: Face first / landscape / Full Body + Eye Detail bottom row
    48: Beauty Main removed
    49: LookDev locked
    ============================================================ */
@@ -169,21 +169,19 @@ a{text-decoration:none;color:inherit;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
 /* 03 FINAL RENDER
-   50 Accept if:
-   - Full Body = 左側最大枠 (2fr, aspect 2/3)
-   - Face = 右上 (aspect 3/4)
-   - Eye Detail = 右下 (Faceの下、浮かせない)
-   - 視線: Full Body → Face → Eye Detail
+   53 Layout (LOCKED after acceptance):
+   [ Face 16/7 — full width landscape, large ]
+   [ Full Body 2/3 | Eye Detail 1/1 ]
+   Regression防止: 比率は固定。上限サイズ管理あり。
    Beauty Main: 削除済み。第4要素なし。 */
-.c-fr-layout{display:grid;grid-template-columns:2fr 1fr;gap:var(--gap);margin-bottom:16px;align-items:start;}
-.c-fr-left{aspect-ratio:2/3;}
-.c-fr-left .iw{height:100%;}
-.c-fr-right{display:flex;flex-direction:column;gap:var(--gap);}
-/* 52: Face landscape (4/3), Eye Detail compact square (1/1) — natural scale */
-.c-fr-right-top{aspect-ratio:4/3;}
-.c-fr-right-top .iw{height:100%;}
-.c-fr-right-bottom{aspect-ratio:1/1;}
-.c-fr-right-bottom .iw{height:100%;}
+.c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;}
+.c-fr-face-row{width:100%;aspect-ratio:16/7;}
+.c-fr-face-row .iw{height:100%;}
+.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
+.c-fr-bottom-left{aspect-ratio:2/3;}
+.c-fr-bottom-left .iw{height:100%;}
+.c-fr-bottom-right{aspect-ratio:1/1;}
+.c-fr-bottom-right .iw{height:100%;}
 .c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 
 /* 04 TECHNICAL FOCUS */
@@ -276,18 +274,18 @@ a{text-decoration:none;color:inherit;}
 .exp-role{font-size:7px;color:var(--gold);letter-spacing:.08em;}
 .exp-note{font-size:7px;color:var(--dim);}
 
-/* LIGHTBOX */
+/* LIGHTBOX — 53: ESC/閉じるボタンを大きく、背景クリックで閉じる（既存動作を維持・強化） */
 .lb{position:fixed;inset:0;z-index:8000;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;}
 .lb.open{opacity:1;visibility:visible;}
 .lb-inner{position:relative;max-width:90vw;}
-.lb-inner img{max-width:90vw;max-height:88vh;object-fit:contain;border:1px solid var(--border);}
-.lb-close{position:fixed;top:18px;right:24px;font-size:8px;color:var(--mid);letter-spacing:.15em;cursor:pointer;padding:6px 12px;border:1px solid var(--border2);transition:color .2s;}
-.lb-close:hover{color:var(--gold);}
-.lb-cap{position:absolute;bottom:-24px;left:0;font-size:8px;color:var(--dim);}
-.lb-nav{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;}
-.lb-arr{width:28px;height:28px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--mid);transition:color .2s,border-color .2s;}
+.lb-inner img{max-width:90vw;max-height:82vh;object-fit:contain;border:1px solid var(--border);}
+.lb-close{position:fixed;top:16px;right:20px;font-size:9px;color:var(--text);letter-spacing:.15em;cursor:pointer;padding:8px 16px;border:1px solid var(--border2);background:rgba(10,10,10,.8);transition:color .2s,border-color .2s;z-index:8001;}
+.lb-close:hover{color:var(--gold);border-color:var(--gold2);}
+.lb-cap{position:absolute;bottom:-28px;left:0;font-size:8px;color:var(--dim);}
+.lb-nav{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;z-index:8001;}
+.lb-arr{width:36px;height:36px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;color:var(--text);transition:color .2s,border-color .2s;background:rgba(10,10,10,.8);}
 .lb-arr:hover{border-color:var(--gold2);color:var(--gold);}
-.lb-ctr{font-size:7px;color:var(--dim);letter-spacing:.1em;}
+.lb-ctr{font-size:8px;color:var(--text);letter-spacing:.1em;padding:0 8px;}
 
 /* ============================================================
    TABLET
@@ -297,8 +295,9 @@ a{text-decoration:none;color:inherit;}
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
-  /* Final Render: 2col維持（右スタックも維持） */
-  .c-fr-layout{grid-template-columns:2fr 1fr;}
+  /* Final Render: tablet でも同じ構成を維持 */
+  .c-fr-face-row{aspect-ratio:16/7;}
+  .c-fr-bottom-row{grid-template-columns:1fr 1fr;}
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
   .c-tech-row:nth-child(even) .c-tech-visual{order:0;}
   .work-item{grid-template-columns:1fr;}
@@ -323,10 +322,9 @@ a{text-decoration:none;color:inherit;}
   .nav-tiles{grid-template-columns:1fr;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
   .c-proc-grid{grid-template-columns:1fr;}
-  /* Final Render mobile: Full Body全幅、右スタックは2列に */
-  .c-fr-layout{grid-template-columns:1fr;}
-  .c-fr-right{flex-direction:row;}
-  .c-fr-right-top,.c-fr-right-bottom{flex:1;}
+  /* Final Render mobile: Face全幅維持、下段は縦積み */
+  .c-fr-face-row{aspect-ratio:4/3;}
+  .c-fr-bottom-row{grid-template-columns:1fr 1fr;}
   .c-tech-stack{gap:48px;}
   .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
   .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}

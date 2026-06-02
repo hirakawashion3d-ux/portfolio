@@ -39,7 +39,7 @@ function reveal(){
 window.addEventListener('scroll',reveal,{passive:true});
 reveal();
 
-// LIGHTBOX
+// LIGHTBOX — 53: background click to close, improved nav visibility
 const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCtr=document.getElementById('lbCtr');
 let items=[],idx=0;
 document.addEventListener('click',e=>{
@@ -54,13 +54,16 @@ function show(){
   lbCap.textContent=el.dataset.cap||'';lbCtr.textContent=(idx+1)+' / '+items.length;
   lb.classList.add('open');
 }
-document.getElementById('lbClose').addEventListener('click',()=>lb.classList.remove('open'));
-document.getElementById('lbPrev').addEventListener('click',()=>{idx=(idx-1+items.length)%items.length;show();});
-document.getElementById('lbNext').addEventListener('click',()=>{idx=(idx+1)%items.length;show();});
+function closeLb(){lb.classList.remove('open');}
+document.getElementById('lbClose').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();idx=(idx-1+items.length)%items.length;show();});
+document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();idx=(idx+1)%items.length;show();});
+// background click to close (53: 戻りやすさ改善)
+lb.addEventListener('click',e=>{if(e.target===lb||e.target===lb.querySelector('.lb-inner'))closeLb();});
+document.querySelector('.lb-inner').addEventListener('click',e=>{if(e.target===document.querySelector('.lb-inner'))closeLb();});
 document.addEventListener('keydown',e=>{
   if(!lb.classList.contains('open'))return;
-  if(e.key==='Escape')lb.classList.remove('open');
+  if(e.key==='Escape')closeLb();
   if(e.key==='ArrowLeft'){idx=(idx-1+items.length)%items.length;show();}
   if(e.key==='ArrowRight'){idx=(idx+1)%items.length;show();}
 });
-lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open');});
