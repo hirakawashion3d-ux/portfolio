@@ -126,6 +126,7 @@ a{text-decoration:none;color:inherit;}
 /* ============================================================
    CHARACTERS PAGE — 2B
    48: Beauty Main removed. Final Render = 3 frames only.
+   49: LookDev sub locked to 3/4 (accepted state restored)
    ============================================================ */
 .c-section{padding:var(--sp-y) var(--sp-x);}
 .c-section > *{max-width:var(--maxw);margin-left:auto;margin-right:auto;}
@@ -166,11 +167,7 @@ a{text-decoration:none;color:inherit;}
 .sw-lbl{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
-/* 03 FINAL RENDER
-   48: Beauty Main完全削除（外枠・ラベル・レイアウト領域ごと）
-   c-fr-3col = 3列グリッド。列比で Full Body(最大) > Face(中) > Eye Detail(最小) を実現。
-   各 c-fr-item は固定 aspect-ratio で、画像のフレームサイズ = 見えサイズに一致。
-   空枠なし。巨大フレームなし。 */
+/* 03 FINAL RENDER (48: Beauty Main removed, 3 frames, no empty frame) */
 .c-fr-3col{display:grid;grid-template-columns:2fr 1.4fr 1fr;gap:var(--gap);margin-bottom:16px;align-items:start;}
 .c-fr-item{display:flex;flex-direction:column;gap:0;}
 .c-fr-fullbody .iw{width:100%;aspect-ratio:2/3;}
@@ -190,7 +187,7 @@ a{text-decoration:none;color:inherit;}
 .c-tech-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);font-weight:300;}
 .c-tech-desc{font-size:8px;color:var(--mid);line-height:1.9;max-width:320px;}
 
-/* Topology Front/Back */
+/* Topology */
 .c-topo-set{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .c-topo-item{display:flex;flex-direction:column;gap:6px;}
 .c-topo-item .iw{width:100%;aspect-ratio:3/4;}
@@ -202,12 +199,15 @@ a{text-decoration:none;color:inherit;}
 .c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.92;}
 .c-tex-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
-/* Lighting Verification */
+/* Lighting Verification — LOCKED by 49
+   Accepted State: c-ld-sub aspect-ratio 3/4
+   Do Not Change: 下補助2枚のサイズ・比率
+   Unlock Condition: ユーザーが明示的に再修正を依頼した場合のみ */
 .c-ld-set{display:flex;flex-direction:column;gap:14px;}
 .c-ld-main{aspect-ratio:16/9;}
 .c-ld-main .iw{height:100%;}
 .c-ld-subs{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.c-ld-sub{aspect-ratio:1/2;}
+.c-ld-sub{aspect-ratio:3/4;}
 .c-ld-sub .iw{height:100%;opacity:.9;}
 
 /* WORK */
@@ -284,14 +284,10 @@ a{text-decoration:none;color:inherit;}
    ============================================================ */
 @media (max-width:1024px){
   :root{--sp-x:56px;--sp-y:72px;--gap:28px;}
-
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
-
-  /* Final Render: 3枠を維持 (比率維持) */
   .c-fr-3col{grid-template-columns:2fr 1.4fr 1fr;}
-
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
   .c-tech-row:nth-child(even) .c-tech-visual{order:0;}
   .work-item{grid-template-columns:1fr;}
@@ -311,20 +307,17 @@ a{text-decoration:none;color:inherit;}
    ============================================================ */
 @media (max-width:600px){
   :root{--sp-x:24px;--sp-y:56px;--gap:24px;}
-
   .home-tools-strip{flex-direction:column;}
   .hts-group{border-right:none;border-bottom:1px solid var(--border);}
   .nav-tiles{grid-template-columns:1fr;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
   .c-proc-grid{grid-template-columns:1fr;}
-
-  /* Final Render mobile: Full Body全幅、Face+Eye横並び */
   .c-fr-3col{grid-template-columns:1fr 1fr;}
   .c-fr-fullbody{grid-column:1 / -1;}
-
   .c-tech-stack{gap:48px;}
   .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
   .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}
   .c-ld-subs{grid-template-columns:1fr 1fr;gap:12px;}
-  .c-ld-sub{aspect-ratio:1/2;}
+  /* LookDev sub: locked 3/4 on mobile too */
+  .c-ld-sub{aspect-ratio:3/4;}
 }
