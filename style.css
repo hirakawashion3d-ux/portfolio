@@ -169,15 +169,15 @@ a{text-decoration:none;color:inherit;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
 /* 03 FINAL RENDER
-   57:
-   - c-fr-sectionにscroll-margin-topでナビゲーションバー干渉回避
-   - 下段4列: Front / Back / Back3/4 (各 2/3) + Eye Detail (小さめ)
-   - grid 1fr 1fr 1fr 0.45fr で Eye Detailを明確に小さく */
+   58:
+   - c-fr-stackにoverflow:hiddenでFace幅からはみ出しを封封
+   - 下段にmax-width:100%とoverflow:hiddenでFace幅内に確実に収める
+   - Eye Detailを 0.45fr → 0.3fr にさらに縮小 */
 .c-fr-section{scroll-margin-top:calc(var(--nav-h) + var(--tab-h) + 16px);}
-.c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;}
+.c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);margin-bottom:16px;overflow:hidden;}
 .c-fr-face-row{width:100%;aspect-ratio:16/7;}
 .c-fr-face-row .iw{height:100%;}
-.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr 0.45fr;gap:var(--gap);width:100%;}
+.c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr 0.3fr;gap:var(--gap);width:100%;max-width:100%;overflow:hidden;}
 .c-fr-body-front{aspect-ratio:2/3;}
 .c-fr-body-front .iw{height:100%;}
 .c-fr-body-back{aspect-ratio:2/3;}
@@ -307,7 +307,7 @@ a{text-decoration:none;color:inherit;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
   .c-fr-face-row{aspect-ratio:16/7;}
-  .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr 0.45fr;}
+  .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr 0.3fr;}
   /* Texture: tabletでは2列2グループずつ */
   .c-tex-groups{grid-template-columns:repeat(2,1fr);}
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
