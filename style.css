@@ -125,8 +125,7 @@ a{text-decoration:none;color:inherit;}
 
 /* ============================================================
    CHARACTERS PAGE — 2B
-   Section order: 01 Hero / 02 Workflow / 03 Final Render / 04 Technical Focus
-   45 user FB: confirmed all 3 items (Beauty Main / support ratio / Lighting)
+   46 QA: Final Render rebalanced, Lighting subs stretched further
    ============================================================ */
 .c-section{padding:var(--sp-y) var(--sp-x);}
 .c-section > *{max-width:var(--maxw);margin-left:auto;margin-right:auto;}
@@ -168,13 +167,16 @@ a{text-decoration:none;color:inherit;}
 .sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
 
 /* 03 FINAL RENDER
-   45 FB [1]: Beauty Main = 1.5fr (縮小) / aspect-ratio 1/1
-   45 FB [2]: support rail = 1.8fr(Full Body最大) 1.3fr(View中) 0.9fr(Eye最小)
-              Alt削除済み。枠ズレなし。 */
-.c-fr-grid{display:grid;grid-template-columns:1.5fr 1.4fr;gap:var(--gap);margin-bottom:18px;align-items:stretch;}
-.c-fr-main{aspect-ratio:1/1;}
+   46 QA FB checklist:
+   [1] Beauty Main: grid 1fr/1.8fr に変更。mainをさらに縮小し、support railの幅を拡大
+       c-fr-main aspect-ratio 4/5 (縦長でコンパクトに)
+   [2] support 3枠 = 全身(2fr最大) / 顔(1.4fr中) / 目アップ(0.9fr最小)
+       画像 = fullbody_front / face_front / eye_detail (Viewなし、Altなし)
+   [3] Viewを顔より優先していない */
+.c-fr-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:var(--gap);margin-bottom:18px;align-items:stretch;}
+.c-fr-main{aspect-ratio:4/5;}
 .c-fr-main .iw{height:100%;}
-.c-fr-rail{display:grid;grid-template-rows:1.8fr 1.3fr 0.9fr;gap:var(--gap);}
+.c-fr-rail{display:grid;grid-template-rows:2fr 1.4fr 0.9fr;gap:var(--gap);}
 .c-fr-support .iw{width:100%;height:100%;}
 .c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 
@@ -202,13 +204,14 @@ a{text-decoration:none;color:inherit;}
 .c-tex-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
 /* Lighting Verification
-   45 FB [3]: 下2枚 = aspect-ratio 3/4 (縦長) で浅い横長枠を解消
-              main = 16/10、gap拡大で空枠感を排除 */
+   46 QA [4]: 下2枚をさらに縦長に
+   前回 3/4 → 今回 1/2 (より縦長) で浅い横長感を完全解消
+   mainも 16/10 → 16/9 にしてスッキリとした横比率に */
 .c-ld-set{display:flex;flex-direction:column;gap:14px;}
-.c-ld-main{aspect-ratio:16/10;}
+.c-ld-main{aspect-ratio:16/9;}
 .c-ld-main .iw{height:100%;}
 .c-ld-subs{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.c-ld-sub{aspect-ratio:3/4;}
+.c-ld-sub{aspect-ratio:1/2;}
 .c-ld-sub .iw{height:100%;opacity:.9;}
 
 /* WORK */
@@ -290,10 +293,10 @@ a{text-decoration:none;color:inherit;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
   .c-proc-grid{grid-template-columns:repeat(2,1fr);}
 
-  /* Final Render: main→上、support→横並び(サイズ比維持) */
+  /* Final Render: main上、support横並び(サイズ比維持) */
   .c-fr-grid{grid-template-columns:1fr;gap:var(--gap);}
   .c-fr-main{aspect-ratio:4/5;}
-  .c-fr-rail{grid-template-rows:none;grid-template-columns:1.8fr 1.3fr 0.9fr;}
+  .c-fr-rail{grid-template-rows:none;grid-template-columns:2fr 1.4fr 0.9fr;}
   .c-fr-support .iw{aspect-ratio:3/4;}
 
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
@@ -311,7 +314,7 @@ a{text-decoration:none;color:inherit;}
 }
 
 /* ============================================================
-   MOBILE — 1 column, reduce visual count
+   MOBILE — 1 column
    ============================================================ */
 @media (max-width:600px){
   :root{--sp-x:24px;--sp-y:56px;--gap:24px;}
@@ -322,7 +325,9 @@ a{text-decoration:none;color:inherit;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
   .c-proc-grid{grid-template-columns:1fr;}
 
-  /* Final Render mobile: Full Body全幅、View+Eye横並び */
+  /* Final Render mobile: 全身全幅、顔+目アップ横並び */
+  .c-fr-grid{grid-template-columns:1fr;}
+  .c-fr-main{aspect-ratio:4/5;}
   .c-fr-rail{grid-template-rows:none;grid-template-columns:1fr 1fr;}
   .c-fr-fullbody{grid-column:1 / -1;}
   .c-fr-support .iw{aspect-ratio:4/3;}
@@ -331,5 +336,7 @@ a{text-decoration:none;color:inherit;}
   .c-tech-stack{gap:48px;}
   .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
   .c-tex-set{grid-template-columns:repeat(2,1fr);gap:10px;}
+  /* Lighting subs: mobile でも縦長維持 */
   .c-ld-subs{grid-template-columns:1fr 1fr;gap:12px;}
+  .c-ld-sub{aspect-ratio:1/2;}
 }

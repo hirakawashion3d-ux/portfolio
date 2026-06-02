@@ -155,10 +155,10 @@
   </div>
 </div>
 
-<!-- CHARACTERS — 2B (45: strict user FB compliance confirmed 2026-06-02) -->
+<!-- CHARACTERS — 2B (46 QA: Final Render rebalanced 2026-06-02) -->
 <div class="page" id="page-characters">
 
-  <!-- 01 HERO — single strong main image, NO support rail -->
+  <!-- 01 HERO -->
   <section class="c-section c-hero-sec">
     <div class="c-sec-label">01 — Hero</div>
     <div class="c-hero-grid">
@@ -192,7 +192,7 @@
     </div>
   </section>
 
-  <!-- 02 WORKFLOW / PRODUCTION PROCESS — Hero直後 (採用担当優先) -->
+  <!-- 02 WORKFLOW / PRODUCTION PROCESS -->
   <section class="c-section c-proc-sec">
     <div class="c-sec-label">02 — Workflow / Production Process</div>
     <div class="c-proc-intro rv">
@@ -227,10 +227,10 @@
   </section>
 
   <!-- 03 FINAL RENDER
-       45 FB confirmed:
-       - Beauty Main: 1.5fr / aspect 1:1 (縮小済み)
-       - support rail: Full Body(1.8fr最大) > Side View(1.3fr中) > Eye Detail(0.9fr最小)
-       - Alt: 削除済み -->
+       46 QA:
+       - Beauty Main: 1fr (さらに縮小) / support rail: 1.8fr (幅拡大)
+       - support 3枠 = 全身(fullbody_front, 2fr最大) / 顔(face_front, 1.4fr中) / 目アップ(eye_detail, 0.9fr最小)
+       - Alt不使用、Viewを顔より優先しない -->
   <section class="c-section">
     <div class="c-sec-label">03 — Final Render</div>
     <div class="c-fr-grid rv">
@@ -247,9 +247,9 @@
             <div class="ov"></div>
           </div>
         </div>
-        <div class="c-fr-support c-fr-view">
-          <div class="iw lb-t" style="height:100%" data-cap="Side View" data-group="gallery">
-            <img src="images/2b/fullbody_side.jpg" alt="Side View">
+        <div class="c-fr-support c-fr-face">
+          <div class="iw lb-t" style="height:100%" data-cap="Face Close-up" data-group="gallery">
+            <img src="images/2b/face_front.jpg" alt="Face">
             <div class="ov"></div>
           </div>
         </div>
@@ -264,10 +264,7 @@
     <div class="c-fr-caption">Cinematic lighting · PBR · UE5 Lumen · ACES CG</div>
   </section>
 
-  <!-- 04 TECHNICAL FOCUS
-       Topology: Front / Back 2枠
-       Texture: ORM / Diffuse / Normal / SSS Mask (Unreal想定)
-       Lighting Verification: main(16/10) + 下2枚(3/4 縦長) -->
+  <!-- 04 TECHNICAL FOCUS -->
   <section class="c-section">
     <div class="c-sec-label">04 — Technical Focus</div>
     <div class="c-tech-stack rv">
@@ -302,6 +299,8 @@
         </div>
       </div>
 
+      <!-- Lighting Verification
+           46 QA: 下2枚をさらに縦長に (aspect-ratio 1/2) -->
       <div class="c-tech-row">
         <div class="c-tech-visual">
           <div class="c-ld-set">
