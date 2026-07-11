@@ -9,30 +9,36 @@ window.addEventListener('scroll',()=>{
 },{passive:true});
 // top-nav: always visible (60: hide on scroll removed per user intent)
 
-// TABS
+// CONTINUOUS PORTFOLIO NAVIGATION
+// Every section stays in the document so recruiters can read the work in one scroll.
 const pages={};document.querySelectorAll('.page').forEach(p=>pages[p.id.replace('page-','')]=p);
 const tabs=document.querySelectorAll('.h-tab[data-page]');
 function go(id){
-  Object.values(pages).forEach(p=>p.classList.remove('active'));
-  tabs.forEach(t=>t.classList.remove('active'));
-  if(pages[id]){pages[id].classList.add('active');window.scrollTo(0,0);}
-  tabs.forEach(t=>{if(t.dataset.page===id)t.classList.add('active');});
-  reveal();
+  const target=pages[id];if(!target)return;
+  target.scrollIntoView({behavior:'smooth',block:'start'});
 }
 tabs.forEach(t=>t.addEventListener('click',()=>go(t.dataset.page)));
 document.getElementById('logoHome').addEventListener('click',()=>go('home'));
 document.querySelectorAll('[data-nav]').forEach(el=>el.addEventListener('click',()=>go(el.dataset.nav)));
 
 // REVEAL
-function reveal(){
-  setTimeout(()=>{
-    document.querySelectorAll('.page.active .rv:not(.on)').forEach(el=>{
-      if(el.getBoundingClientRect().top<window.innerHeight*.92)el.classList.add('on');
-    });
-  },40);
+// Each item is observed independently, preventing lower Work entries from
+// remaining transparent after navigation or a direct page load.
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('on');revealObserver.unobserve(entry.target);}
+  });
+},{rootMargin:'0px 0px -8% 0px',threshold:.01});
+document.querySelectorAll('.rv').forEach(item=>revealObserver.observe(item));
+
+function updateActiveTab(){
+  const marker=window.innerHeight*.35;
+  let current='home';
+  Object.entries(pages).forEach(([id,page])=>{if(page.getBoundingClientRect().top<=marker)current=id;});
+  tabs.forEach(tab=>tab.classList.toggle('active',tab.dataset.page===current));
 }
-window.addEventListener('scroll',reveal,{passive:true});
-reveal();
+window.addEventListener('scroll',updateActiveTab,{passive:true});
+updateActiveTab();
 
 // LIGHTBOX
 const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCtr=document.getElementById('lbCtr');
@@ -40,7 +46,7 @@ let items=[],idx=0;
 document.addEventListener('click',e=>{
   const t=e.target.closest('.lb-t');if(!t)return;
   const g=t.dataset.group||'all';
-  items=Array.from(document.querySelectorAll('.page.active .lb-t[data-group="'+g+'"]'));
+  items=Array.from(document.querySelectorAll('.lb-t[data-group="'+g+'"]'));
   idx=items.indexOf(t);show();
 });
 function show(){
