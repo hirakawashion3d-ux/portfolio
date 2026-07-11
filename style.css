@@ -131,6 +131,8 @@ a{text-decoration:none;color:inherit;}
 .c-section{padding:var(--sp-y) var(--sp-x);}
 .c-section > *{max-width:var(--maxw);margin-left:auto;margin-right:auto;}
 .c-section + .c-section{border-top:1px solid var(--border);}
+#page-characters .c-section{padding-left:clamp(24px,4vw,56px);padding-right:clamp(24px,4vw,56px);}
+#page-characters .c-section > *{max-width:1600px;}
 .c-sec-label{font-size:7px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:48px;}
 
 /* 01 HERO */
@@ -182,6 +184,7 @@ a{text-decoration:none;color:inherit;}
 .c-fr-face-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);aspect-ratio:auto;}
 .c-fr-face-detail{min-width:0;aspect-ratio:4/5;}
 .c-fr-face-detail .iw{height:100%;}
+.c-fr-face-angles .c-fr-face-detail{aspect-ratio:16/9;}
 .c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);width:100%;}
 .c-fr-body-front{aspect-ratio:2/3;}
 .c-fr-body-front .iw{height:100%;}
@@ -213,8 +216,8 @@ a{text-decoration:none;color:inherit;}
    各グループに Diffuse / Normal / ORM / SSS Mask の2×2 mini-grid */
 .c-tex-row{grid-template-columns:1fr !important;}
 .c-tex-row .c-tech-visual{order:0 !important;}
-.c-tex-visual-wide{width:100%;}
-.c-tex-groups{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+.c-tex-visual-wide{width:100%;overflow-x:auto;padding-bottom:4px;}
+#page-characters .c-tex-groups{display:grid;grid-template-columns:2fr 2fr 3fr 3fr 3fr;gap:18px;min-width:1260px;}
 .c-tex-group{display:flex;flex-direction:column;gap:10px;}
 .c-tex-group-label{font-size:7px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--border2);}
 .c-tex-set{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
@@ -254,7 +257,7 @@ a{text-decoration:none;color:inherit;}
 
 /* 2-image layout */
 .wk-imgs-2{grid-template-columns:repeat(2,minmax(0,1fr));}
-.wk-imgs-single{grid-template-columns:1fr;}
+.wk-imgs-single{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;}
 
 /* 3-image layout */
 .wk-imgs-3{grid-template-columns:repeat(3,minmax(0,1fr));}
@@ -264,7 +267,7 @@ a{text-decoration:none;color:inherit;}
 .wk-aww-process-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
 .wk-imgs-qvou{grid-template-columns:repeat(4,minmax(0,1fr));}
 .wk-imgs-hair-cloth{grid-template-columns:repeat(5,minmax(0,1fr));}
-.wk-imgs-sculpt{grid-template-columns:repeat(2,minmax(0,320px));justify-content:start;}
+.wk-imgs-sculpt{grid-template-columns:repeat(4,minmax(0,1fr));}
 
 /* Image frames */
 .wk-img-hero,.wk-img-detail,.wk-img-validation,.wk-img-portrait,.wk-img-landscape{min-width:0;aspect-ratio:4/3;overflow:hidden;background:var(--surface);}
@@ -351,7 +354,7 @@ a{text-decoration:none;color:inherit;}
   .c-fr-face-row{aspect-ratio:16/7;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr;}
   /* Texture: tabletでは2列2グループずつ */
-  .c-tex-groups{grid-template-columns:repeat(2,1fr);}
+  #page-characters .c-tex-groups{grid-template-columns:repeat(2,1fr);min-width:0;}
   .c-tech-row,.c-tech-row:nth-child(even){grid-template-columns:1fr;gap:24px;}
   .c-tech-row:nth-child(even) .c-tech-visual{order:0;}
   /* Work 62: tablet */
@@ -390,7 +393,7 @@ a{text-decoration:none;color:inherit;}
   .c-fr-face-details{aspect-ratio:auto;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr;}
   /* Texture: mobileでは1列 */
-  .c-tex-groups{grid-template-columns:1fr;}
+  #page-characters .c-tex-groups{grid-template-columns:1fr;min-width:0;}
   .c-tech-stack{gap:48px;}
   .c-topo-set{grid-template-columns:1fr 1fr;gap:12px;}
   .c-ld-subs{grid-template-columns:1fr 1fr;gap:12px;}
