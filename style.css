@@ -400,9 +400,9 @@ a{text-decoration:none;color:inherit;}
   .c-proc-step-active .c-proc-node{box-shadow:0 0 0 6px var(--bg);}
   .c-proc-step-name{margin-top:0;padding-top:3px;}
   .c-fr-face-row{aspect-ratio:4/3;}
-  .c-fr-face-details{aspect-ratio:auto;}
+  .c-fr-face-details{grid-template-columns:1fr;aspect-ratio:auto;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr;}
-  .c-fr-fullbody-row{grid-template-columns:1fr 1fr;}
+  .c-fr-fullbody-row{grid-template-columns:1fr;}
   /* Texture: mobileでは1列 */
   #page-characters .c-tex-groups{grid-template-columns:1fr;min-width:0;}
   .c-tech-stack{gap:48px;}
