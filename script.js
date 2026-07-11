@@ -1,8 +1,4 @@
-// CURSOR
-const cdot=document.getElementById('cdot'),cring=document.getElementById('cring');
-let mx=0,my=0,rx=0,ry=0,hasCursorPosition=false;
-document.addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;if(!hasCursorPosition){rx=mx;ry=my;hasCursorPosition=true;}cdot.style.left=mx+'px';cdot.style.top=my+'px';});
-(function ar(){rx+=(mx-rx)*.28;ry+=(my-ry)*.28;cring.style.left=rx+'px';cring.style.top=ry+'px';requestAnimationFrame(ar);})();
+// Native operating system cursor is used. No custom cursor follower.
 
 // LOADER
 window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('done'),1400));
