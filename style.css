@@ -99,13 +99,14 @@ a{text-decoration:none;color:inherit;}
 .btn-p:hover{background:#c8aa6a;}
 .btn-o{border:1px solid var(--border2);color:var(--mid);}
 .btn-o:hover{border-color:var(--gold2);color:var(--gold);}
-.nav-tiles{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:1px;background:var(--border);border-top:1px solid var(--border);}
-.nav-tile{position:relative;overflow:hidden;cursor:pointer;background:var(--surface);}
+.nav-tiles{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:0;background:var(--bg);border-top:1px solid var(--border);overflow:hidden;}
+.nav-tile{position:relative;overflow:hidden;cursor:pointer;background:var(--surface);margin-left:-34px;clip-path:polygon(34px 0,100% 0,calc(100% - 34px) 100%,0 100%);isolation:isolate;}
+.nav-tile:first-child{margin-left:0;clip-path:polygon(0 0,100% 0,calc(100% - 34px) 100%,0 100%);}
+.nav-tile:last-child{clip-path:polygon(34px 0,100% 0,100% 100%,0 100%);}
 .nav-tile .iw{height:100%;min-height:200px;filter:brightness(.6);transition:filter .4s var(--ease);}
 .nav-tile:hover .iw{filter:brightness(.75);}
 .nav-tile-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.7) 100%);pointer-events:none;}
-.nav-tile::after{content:'';position:absolute;top:0;right:-1px;width:28px;height:100%;background:var(--border);clip-path:polygon(100% 0,100% 100%,0 100%);pointer-events:none;z-index:3;}
-.nav-tile:last-child::after{display:none;}
+.nav-tile::after{display:none;}
 .nav-tile-info{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;z-index:2;}
 .nav-tile-label{font-size:9px;letter-spacing:.2em;color:var(--white);text-transform:uppercase;margin-bottom:3px;}
 .nav-tile-sub{font-size:7px;letter-spacing:.1em;color:rgba(255,255,255,.5);text-transform:uppercase;}
@@ -361,6 +362,7 @@ a{text-decoration:none;color:inherit;}
   .home-tools-strip{flex-direction:column;}
   .hts-group{border-right:none;border-bottom:1px solid var(--border);}
   .nav-tiles{grid-template-columns:1fr;}
+  .nav-tile,.nav-tile:first-child,.nav-tile:last-child{margin-left:0;clip-path:none;}
   .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
   .c-proc-grid{grid-template-columns:1fr;}
   .c-fr-face-row{aspect-ratio:4/3;}
