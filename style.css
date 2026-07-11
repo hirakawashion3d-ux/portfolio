@@ -131,44 +131,44 @@ a{text-decoration:none;color:inherit;}
 .c-section{padding:var(--sp-y) var(--sp-x);}
 .c-section > *{max-width:var(--maxw);margin-left:auto;margin-right:auto;}
 .c-section + .c-section{border-top:1px solid var(--border);}
-#page-characters .c-section{padding-left:clamp(16px,2vw,32px);padding-right:clamp(16px,2vw,32px);}
+#page-characters .c-section{padding-left:clamp(32px,3vw,72px);padding-right:clamp(32px,3vw,72px);}
 #page-characters .c-section > *{max-width:none;}
-.c-sec-label{font-size:7px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:48px;}
+.c-sec-label{font-size:9px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:48px;}
 
 /* 01 HERO */
 .c-hero-sec{padding-top:calc(var(--sp-y) * 1.2);}
-.c-hero-grid{display:grid;grid-template-columns:2fr 3fr;gap:72px;align-items:start;}
+.c-hero-grid{display:grid;grid-template-columns:minmax(320px,.68fr) minmax(0,1.32fr);gap:clamp(48px,4vw,88px);align-items:start;}
 .c-hero-left{display:flex;flex-direction:column;gap:0;}
-.c-hero-eyebrow{font-size:7px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
-.c-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,60px);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:24px;}
+.c-hero-eyebrow{font-size:9px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
+.c-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,4vw,72px);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:24px;}
 .c-hero-title em{font-style:italic;color:var(--mid);}
-.c-hero-sub{font-size:9px;color:var(--mid);line-height:1.9;max-width:280px;margin-bottom:32px;}
+.c-hero-sub{font-size:11px;color:var(--mid);line-height:1.9;max-width:420px;margin-bottom:32px;}
 .c-hero-meta{display:flex;gap:32px;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:28px;}
 .c-hero-scope{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:24px;}
-.scope-lbl{font-size:6px;letter-spacing:.25em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
-.scope-tag{padding:3px 9px;border:1px solid var(--border2);font-size:6px;letter-spacing:.1em;color:var(--mid);text-transform:uppercase;}
+.scope-lbl{font-size:8px;letter-spacing:.25em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
+.scope-tag{padding:4px 10px;border:1px solid var(--border2);font-size:8px;letter-spacing:.1em;color:var(--mid);text-transform:uppercase;}
 .cm-item{display:flex;flex-direction:column;gap:4px;}
-.cm-v{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--white);}
-.cm-k{font-size:6px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
-.study-b{display:inline-block;padding:4px 10px;border:1px solid var(--border2);font-size:6px;letter-spacing:.15em;color:var(--dim);}
+.cm-v{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--white);}
+.cm-k{font-size:8px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
+.study-b{display:inline-block;padding:5px 11px;border:1px solid var(--border2);font-size:8px;letter-spacing:.15em;color:var(--dim);}
 .c-hero-right{display:flex;flex-direction:column;gap:0;}
-.c-hero-main-img{width:100%;aspect-ratio:4/5;max-height:80vh;}
+.c-hero-main-img{width:min(100%,1360px);aspect-ratio:1122/1402;max-height:none;align-self:flex-end;}
 .c-hero-main-img .iw{height:100%;}
 
 /* 02 PROCESS */
 .c-proc-sec .c-sec-label{}
 .c-proc-intro{margin-bottom:36px;}
-.c-proc-desc{font-size:9px;color:var(--mid);line-height:1.9;max-width:480px;}
+.c-proc-desc{font-size:11px;color:var(--mid);line-height:1.9;max-width:620px;}
 .c-proc-timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative;width:min(100%,var(--maxw));margin:0 auto 32px;padding-top:14px;}
 .c-proc-timeline::before{content:"";position:absolute;left:0;right:0;top:28px;height:1px;background:var(--border2);}
 .c-proc-step{position:relative;padding:38px 22px 0 0;min-height:148px;z-index:1;}
 .c-proc-node{display:flex;align-items:center;justify-content:center;width:29px;height:29px;border-radius:50%;border:1px solid var(--mid);background:var(--bg);color:var(--mid);font-size:7px;letter-spacing:.08em;}
 .c-proc-step-active .c-proc-node{border-color:var(--gold);background:var(--gold);color:var(--bg);box-shadow:0 0 0 7px var(--bg);}
-.c-proc-step-name{margin-top:14px;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--white);}
-.c-proc-step p{margin:7px 0 0;max-width:175px;font-size:8px;line-height:1.8;color:var(--mid);}
+.c-proc-step-name{margin-top:14px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--white);}
+.c-proc-step p{margin:7px 0 0;max-width:220px;font-size:10px;line-height:1.8;color:var(--mid);}
 .c-tools-bar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
-.sw-lbl{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
-.sw-tag{padding:3px 10px;border:1px solid var(--border2);font-size:7px;color:var(--mid);}
+.sw-lbl{font-size:9px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;margin-right:4px;}
+.sw-tag{padding:4px 11px;border:1px solid var(--border2);font-size:9px;color:var(--mid);}
 
 /* 03 FINAL RENDER
    61 Current Spec:
@@ -183,19 +183,19 @@ a{text-decoration:none;color:inherit;}
 .c-fr-face-row .iw{height:100%;}
 .c-fr-face-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);aspect-ratio:auto;}
 .c-fr-face-detail{min-width:0;aspect-ratio:4/5;}
-.c-fr-face-details:not(.c-fr-face-angles){max-width:1080px;align-self:flex-start;}
-.c-fr-face-details:not(.c-fr-face-angles) .c-fr-face-detail{aspect-ratio:4/3;}
+.c-fr-face-details:not(.c-fr-face-angles){max-width:1320px;align-self:flex-start;}
+.c-fr-face-details:not(.c-fr-face-angles) .c-fr-face-detail{aspect-ratio:1/1;}
 .c-fr-face-detail .iw{height:100%;}
 .c-fr-face-angles .c-fr-face-detail{aspect-ratio:16/9;}
 .c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);width:100%;}
-.c-fr-body-front{aspect-ratio:2/3;}
+.c-fr-body-front{aspect-ratio:4/5;}
 .c-fr-body-front .iw{height:100%;}
-.c-fr-body-back{aspect-ratio:2/3;}
+.c-fr-body-back{aspect-ratio:4/5;}
 .c-fr-body-back .iw{height:100%;}
-.c-fr-body-back34{aspect-ratio:2/3;}
+.c-fr-body-back34{aspect-ratio:4/5;}
 .c-fr-body-back34 .iw{height:100%;}
-.c-fr-fullbody-row{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1320px;}
-.c-fr-caption{font-size:7px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
+.c-fr-fullbody-row{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1560px;}
+.c-fr-caption{font-size:9px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 
 /* 04 TECHNICAL FOCUS */
 .c-tech-stack{display:flex;flex-direction:column;gap:56px;}
@@ -204,16 +204,16 @@ a{text-decoration:none;color:inherit;}
 .c-tech-row:nth-child(even) .c-tech-visual{order:2;}
 .c-tech-visual{min-width:0;}
 .c-tech-body{display:flex;flex-direction:column;gap:10px;}
-.c-tech-label{font-size:7px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;}
-.c-tech-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);font-weight:300;}
-.c-tech-desc{font-size:8px;color:var(--mid);line-height:1.9;max-width:320px;}
+.c-tech-label{font-size:9px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;}
+.c-tech-title{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--white);font-weight:300;}
+.c-tech-desc{font-size:11px;color:var(--mid);line-height:1.9;max-width:440px;}
 
 /* Topology
    59: Edge Flow 2枠を少し大きく (3/4 → 2/3) */
 .c-topo-set{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .c-topo-item{display:flex;flex-direction:column;gap:6px;}
-.c-topo-item .iw{width:100%;aspect-ratio:2/3;}
-.c-topo-lbl{font-size:6px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
+.c-topo-item .iw{width:100%;aspect-ratio:4/5;}
+.c-topo-lbl{font-size:8px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
 
 /* Texture — 54: 4グループ横並び (Face / Body / Cloth Upper / Cloth Lower)
    各グループに Diffuse / Normal / ORM / SSS Mask の2×2 mini-grid */
@@ -223,12 +223,12 @@ a{text-decoration:none;color:inherit;}
 .c-tex-visual-wide{width:100%;overflow-x:auto;padding-bottom:4px;}
 #page-characters .c-tex-groups{display:grid;grid-template-columns:repeat(5,minmax(260px,1fr));gap:22px;min-width:1600px;}
 .c-tex-group{display:flex;flex-direction:column;gap:10px;}
-.c-tex-group-label{font-size:7px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--border2);}
+.c-tex-group-label{font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--border2);}
 .c-tex-set{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
 .c-tex-group-3 .c-tex-set{grid-template-columns:repeat(2,minmax(0,1fr));}
 .c-tex-item{display:flex;flex-direction:column;gap:4px;}
 .c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.9;}
-.c-tex-lbl{font-size:6px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;}
+.c-tex-lbl{font-size:8px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;}
 .c-sculpt-feature{width:min(100%,1280px);aspect-ratio:16/9;}
 .c-sculpt-feature .iw{height:100%;}
 
@@ -356,7 +356,8 @@ a{text-decoration:none;color:inherit;}
 @media (max-width:1024px){
   :root{--sp-x:56px;--sp-y:72px;--gap:28px;}
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
-  .c-hero-main-img{aspect-ratio:4/5;max-height:68vh;}
+  #page-characters .c-section{padding-left:clamp(32px,5.5vw,56px);padding-right:clamp(32px,5.5vw,56px);}
+  .c-hero-main-img{aspect-ratio:1122/1402;max-height:none;}
   .c-fr-face-row{aspect-ratio:16/7;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr;}
   .c-fr-fullbody-row{grid-template-columns:repeat(3,minmax(0,1fr));}
@@ -389,7 +390,8 @@ a{text-decoration:none;color:inherit;}
   .hts-group{border-right:none;border-bottom:1px solid var(--border);}
   .nav-tiles{grid-template-columns:1fr;}
   .nav-tile,.nav-tile:first-child,.nav-tile:last-child{margin-left:0;clip-path:none;}
-  .c-hero-main-img{aspect-ratio:4/5;max-height:none;}
+  #page-characters .c-section{padding-left:24px;padding-right:24px;}
+  .c-hero-main-img{aspect-ratio:1122/1402;max-height:none;}
   .c-proc-timeline{grid-template-columns:1fr;gap:0;padding:0 0 0 24px;margin:0 auto 28px;}
   .c-proc-timeline::before{left:14px;right:auto;top:0;bottom:0;width:1px;height:auto;}
   .c-proc-step{min-height:0;padding:0 0 24px 24px;}
