@@ -30,6 +30,13 @@ const revealObserver=new IntersectionObserver(entries=>{
   });
 },{rootMargin:'0px 0px -8% 0px',threshold:.01});
 document.querySelectorAll('.rv').forEach(item=>revealObserver.observe(item));
+function revealThroughViewport(){
+  document.querySelectorAll('.rv:not(.on)').forEach(item=>{
+    if(item.getBoundingClientRect().top<window.innerHeight*.92)item.classList.add('on');
+  });
+}
+window.addEventListener('scroll',revealThroughViewport,{passive:true});
+revealThroughViewport();
 
 function updateActiveTab(){
   const marker=window.innerHeight*.35;
