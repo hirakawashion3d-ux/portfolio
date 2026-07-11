@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hirakawa Shion — Character Artist</title>
-<link rel="stylesheet" href="style.css?v=20260712-8">
+  <link rel="stylesheet" href="style.css?v=20260712-10">
 </head>
 <body>
 
@@ -226,16 +226,15 @@
     </div>
   </section>
 
-  <!-- 03 FINAL RENDER
+  <!-- 03 REAL-TIME RENDERING
        59: Eye Detail削除。Face + Full Body 3枠の安定構成に絞る -->
   <section class="c-section c-fr-section">
-    <div class="c-sec-label">03 — Final Render</div>
+    <div class="c-sec-label">03 — Real-Time Rendering</div>
     <div class="c-fr-stack rv">
-      <div class="c-fr-face-row">
-        <div class="iw lb-t" style="height:100%" data-cap="Face Close-up" data-group="gallery">
-          <img src="images/2b/face_front.png" alt="Face">
-          <div class="ov"></div>
-        </div>
+      <div class="c-fr-face-row c-fr-face-details">
+        <div class="c-fr-face-detail"><div class="iw lb-t" style="height:100%" data-cap="Real-Time Face — Front" data-group="gallery"><img src="images/2b/realtime_face_front.jpg" alt="2B real-time face front"><div class="ov"></div></div></div>
+        <div class="c-fr-face-detail"><div class="iw lb-t" style="height:100%" data-cap="Real-Time Face — Three Quarter" data-group="gallery"><img src="images/2b/realtime_face_three_quarter.jpg" alt="2B real-time face three quarter"><div class="ov"></div></div></div>
+        <div class="c-fr-face-detail"><div class="iw lb-t" style="height:100%" data-cap="Real-Time Eye Detail" data-group="gallery"><img src="images/2b/realtime_eye_detail.jpg" alt="2B real-time eye detail"><div class="ov"></div></div></div>
       </div>
       <div class="c-fr-bottom-row">
         <div class="c-fr-body-front">
@@ -258,7 +257,7 @@
         </div>
       </div>
     </div>
-    <div class="c-fr-caption">PBR · UE5 Lumen · ACES CG</div>
+    <div class="c-fr-caption">REAL-TIME PBR · UE5 LUMEN · ACES CG</div>
   </section>
 
   <!-- 04 TECHNICAL FOCUS -->
@@ -303,22 +302,28 @@
                 <div class="c-tex-item"><div class="iw lb-t" data-cap="Body — SSS Mask" data-group="tech"><img src="images/2b/tex_body_sss.jpg" alt="Body SSS"></div><span class="c-tex-lbl">SSS</span></div>
               </div>
             </div>
-            <div class="c-tex-group">
+            <div class="c-tex-group c-tex-group-3">
               <div class="c-tex-group-label">Cloth Upper</div>
               <div class="c-tex-set">
                 <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — Diffuse" data-group="tech"><img src="images/2b/tex_cloth_upper_albedo.jpg" alt="Cloth Upper Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
                 <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — Normal" data-group="tech"><img src="images/2b/tex_cloth_upper_normal.jpg" alt="Cloth Upper Normal"></div><span class="c-tex-lbl">Normal</span></div>
                 <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — ORM" data-group="tech"><img src="images/2b/tex_cloth_upper_roughness.jpg" alt="Cloth Upper ORM"></div><span class="c-tex-lbl">ORM</span></div>
-                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Upper — SSS Mask" data-group="tech"><img src="images/2b/tex_cloth_upper_sss.jpg" alt="Cloth Upper SSS"></div><span class="c-tex-lbl">SSS</span></div>
               </div>
             </div>
-            <div class="c-tex-group">
+            <div class="c-tex-group c-tex-group-3">
               <div class="c-tex-group-label">Cloth Lower</div>
               <div class="c-tex-set">
                 <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — Diffuse" data-group="tech"><img src="images/2b/tex_cloth_lower_albedo.jpg" alt="Cloth Lower Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
                 <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — Normal" data-group="tech"><img src="images/2b/tex_cloth_lower_normal.jpg" alt="Cloth Lower Normal"></div><span class="c-tex-lbl">Normal</span></div>
                 <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — ORM" data-group="tech"><img src="images/2b/tex_cloth_lower_roughness.jpg" alt="Cloth Lower ORM"></div><span class="c-tex-lbl">ORM</span></div>
-                <div class="c-tex-item"><div class="iw lb-t" data-cap="Cloth Lower — SSS Mask" data-group="tech"><img src="images/2b/tex_cloth_lower_sss.jpg" alt="Cloth Lower SSS"></div><span class="c-tex-lbl">SSS</span></div>
+              </div>
+            </div>
+            <div class="c-tex-group c-tex-group-3">
+              <div class="c-tex-group-label">Boots</div>
+              <div class="c-tex-set">
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Boots — Diffuse" data-group="tech"><img src="images/2b/tex_boots_albedo.jpg" alt="Boots Diffuse"></div><span class="c-tex-lbl">Diffuse</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Boots — Normal" data-group="tech"><img src="images/2b/tex_boots_normal.jpg" alt="Boots Normal"></div><span class="c-tex-lbl">Normal</span></div>
+                <div class="c-tex-item"><div class="iw lb-t" data-cap="Boots — ORM" data-group="tech"><img src="images/2b/tex_boots_roughness.jpg" alt="Boots ORM"></div><span class="c-tex-lbl">ORM</span></div>
               </div>
             </div>
           </div>
@@ -326,7 +331,7 @@
         <div class="c-tech-body">
           <div class="c-tech-label">Texture</div>
           <div class="c-tech-title">PBR Material Suite</div>
-          <div class="c-tech-desc">4096px · 部位別4セット（Face / Body / Cloth Upper / Cloth Lower）。各セットにDiffuse / Normal / ORM / SSS Maskを収録。ACEScg。</div>
+          <div class="c-tech-desc">4096px · Face, Body, Cloth Upper, Cloth Lower and Boots. Maps are grouped by the available Diffuse, Normal, ORM and SSS data.</div>
         </div>
       </div>
 
@@ -426,16 +431,10 @@
 
   <div class="wk-study-list">
     <div class="wk-study rv">
-      <div class="wk-study-imgs wk-imgs-2">
-        <div class="wk-img-hero">
-          <div class="iw lb-t" style="height:100%" data-cap="Digital Twin — Workflow" data-group="wk-dt">
-            <img src="images/work/digitaltwin_sample.jpg" alt="Digital Twin Workflow">
-            <div class="ov"></div>
-          </div>
-        </div>
-        <div class="wk-img-detail">
-          <div class="iw lb-t" style="height:100%" data-cap="Digital Twin — Pipeline Validation" data-group="wk-dt">
-            <img src="images/work/digitaltwin_validation.jpg" alt="Digital Twin Validation">
+      <div class="wk-study-imgs wk-imgs-single">
+        <div class="wk-img-landscape">
+          <div class="iw lb-t" style="height:100%" data-cap="Digital Twin — Vehicle Layout" data-group="wk-dt">
+            <img src="images/work/digital_twin_vehicle_layout.jpg" alt="Digital twin vehicle layout scene">
             <div class="ov"></div>
           </div>
         </div>
@@ -511,8 +510,8 @@
       <div class="wk-study-info">
         <div class="wk-study-label">Personal Sculpting Studies</div>
         <div class="wk-study-title">Classical Composition and Anatomy</div>
-        <div class="wk-study-role">Form, gesture, anatomy and surface-detail practice</div>
-        <div class="wk-study-desc">Personal studies exploring figure composition, portrait structure, drapery and hair. Detail views document the sculpting process and form development.</div>
+        <div class="wk-study-role">造形、ジェスチャー、解剖学、表面ディテールの練習</div>
+        <div class="wk-study-desc">人体構成、肖像の構造、布と髪を題材にした個人制作。ディテール画像ではスカルプトの制作過程と造形の詰め方を記録しています。</div>
         <div class="wk-study-tools">ZBrush · Anatomy Reference · Clay Workflow</div>
         <div class="tag-r"><span class="tag">Sculpt</span><span class="tag">Anatomy</span><span class="tag">ZBrush</span><span class="tag">Personal Study</span></div>
       </div>
