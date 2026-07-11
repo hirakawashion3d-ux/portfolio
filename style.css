@@ -152,7 +152,7 @@ a{text-decoration:none;color:inherit;}
 .cm-k{font-size:6px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;}
 .study-b{display:inline-block;padding:4px 10px;border:1px solid var(--border2);font-size:6px;letter-spacing:.15em;color:var(--dim);}
 .c-hero-right{display:flex;flex-direction:column;gap:0;}
-.c-hero-main-img{width:100%;aspect-ratio:3/4;max-height:80vh;}
+.c-hero-main-img{width:100%;aspect-ratio:4/5;max-height:80vh;}
 .c-hero-main-img .iw{height:100%;}
 
 /* 02 PROCESS */
@@ -183,6 +183,8 @@ a{text-decoration:none;color:inherit;}
 .c-fr-face-row .iw{height:100%;}
 .c-fr-face-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);aspect-ratio:auto;}
 .c-fr-face-detail{min-width:0;aspect-ratio:4/5;}
+.c-fr-face-details:not(.c-fr-face-angles){max-width:1080px;align-self:flex-start;}
+.c-fr-face-details:not(.c-fr-face-angles) .c-fr-face-detail{aspect-ratio:4/3;}
 .c-fr-face-detail .iw{height:100%;}
 .c-fr-face-angles .c-fr-face-detail{aspect-ratio:16/9;}
 .c-fr-bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);width:100%;}
@@ -216,6 +218,7 @@ a{text-decoration:none;color:inherit;}
 /* Texture — 54: 4グループ横並び (Face / Body / Cloth Upper / Cloth Lower)
    各グループに Diffuse / Normal / ORM / SSS Mask の2×2 mini-grid */
 .c-tex-row{grid-template-columns:1fr !important;}
+.c-tex-in-technical{display:none;}
 .c-tex-row .c-tech-visual{order:0 !important;}
 .c-tex-visual-wide{width:100%;overflow-x:auto;padding-bottom:4px;}
 #page-characters .c-tex-groups{display:grid;grid-template-columns:repeat(5,minmax(260px,1fr));gap:22px;min-width:1600px;}
@@ -226,6 +229,8 @@ a{text-decoration:none;color:inherit;}
 .c-tex-item{display:flex;flex-direction:column;gap:4px;}
 .c-tex-item .iw{width:100%;aspect-ratio:1/1;opacity:.9;}
 .c-tex-lbl{font-size:6px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;}
+.c-sculpt-feature{width:min(100%,1280px);aspect-ratio:16/9;}
+.c-sculpt-feature .iw{height:100%;}
 
 /* Lighting Verification — LOCKED (49)
    Accepted State: c-ld-sub aspect-ratio 3/4
@@ -351,7 +356,7 @@ a{text-decoration:none;color:inherit;}
 @media (max-width:1024px){
   :root{--sp-x:56px;--sp-y:72px;--gap:28px;}
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
-  .c-hero-main-img{aspect-ratio:3/4;max-height:68vh;}
+  .c-hero-main-img{aspect-ratio:4/5;max-height:68vh;}
   .c-fr-face-row{aspect-ratio:16/7;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr;}
   .c-fr-fullbody-row{grid-template-columns:repeat(3,minmax(0,1fr));}
@@ -384,7 +389,7 @@ a{text-decoration:none;color:inherit;}
   .hts-group{border-right:none;border-bottom:1px solid var(--border);}
   .nav-tiles{grid-template-columns:1fr;}
   .nav-tile,.nav-tile:first-child,.nav-tile:last-child{margin-left:0;clip-path:none;}
-  .c-hero-main-img{aspect-ratio:3/4;max-height:none;}
+  .c-hero-main-img{aspect-ratio:4/5;max-height:none;}
   .c-proc-timeline{grid-template-columns:1fr;gap:0;padding:0 0 0 24px;margin:0 auto 28px;}
   .c-proc-timeline::before{left:14px;right:auto;top:0;bottom:0;width:1px;height:auto;}
   .c-proc-step{min-height:0;padding:0 0 24px 24px;}
