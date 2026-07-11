@@ -131,7 +131,7 @@ a{text-decoration:none;color:inherit;}
 .c-section{padding:var(--sp-y) var(--sp-x);}
 .c-section > *{max-width:var(--maxw);margin-left:auto;margin-right:auto;}
 .c-section + .c-section{border-top:1px solid var(--border);}
-#page-characters .c-section{padding-left:clamp(40px,6vw,112px);padding-right:clamp(40px,6vw,112px);}
+#page-characters .c-section{padding-left:clamp(48px,7vw,144px);padding-right:clamp(48px,7vw,144px);}
 #page-characters .c-section > *{max-width:none;}
 .c-sec-label{font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:48px;}
 
@@ -178,7 +178,7 @@ a{text-decoration:none;color:inherit;}
    - 61 Regression Fix: overflow:hidden制御を削除。単純にwidth:100%で吴齐
    - Eye Detailなし。Beauty Mainなし。 */
 .c-fr-section{scroll-margin-top:calc(var(--nav-h) + var(--tab-h) + 16px);}
-#page-characters .c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);max-width:1320px;margin:0 auto 16px;}
+#page-characters .c-fr-stack{display:flex;flex-direction:column;gap:var(--gap);max-width:1680px;margin:0 auto 16px;}
 .c-fr-face-row{width:100%;aspect-ratio:16/7;}
 .c-fr-face-row .iw{height:100%;}
 .c-fr-face-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);aspect-ratio:auto;}
@@ -357,7 +357,7 @@ a{text-decoration:none;color:inherit;}
 @media (max-width:1024px){
   :root{--sp-x:56px;--sp-y:72px;--gap:28px;}
   .c-hero-grid{grid-template-columns:1fr;gap:48px;}
-  #page-characters .c-section{padding-left:clamp(40px,6vw,72px);padding-right:clamp(40px,6vw,72px);}
+  #page-characters .c-section{padding-left:clamp(48px,7vw,88px);padding-right:clamp(48px,7vw,88px);}
   .c-hero-main-img{aspect-ratio:1122/1402;max-height:none;}
   .c-fr-face-row{aspect-ratio:16/7;}
   .c-fr-bottom-row{grid-template-columns:1fr 1fr 1fr;}
