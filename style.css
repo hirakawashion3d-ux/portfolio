@@ -255,12 +255,18 @@ a{text-decoration:none;color:inherit;}
 .wk-imgs-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 
 .wk-imgs-aww{grid-template-columns:1fr;gap:16px;}
-.wk-aww-portrait-row,.wk-aww-process-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.wk-aww-portrait-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.wk-aww-process-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.wk-imgs-qvou{grid-template-columns:repeat(2,minmax(0,1fr));}
+.wk-imgs-hair-cloth{grid-template-columns:repeat(5,minmax(0,1fr));}
+.wk-imgs-sculpt{grid-template-columns:repeat(2,minmax(0,1fr));}
 
 /* Image frames */
 .wk-img-hero,.wk-img-detail,.wk-img-validation,.wk-img-portrait,.wk-img-landscape{min-width:0;aspect-ratio:4/3;overflow:hidden;background:var(--surface);}
 .wk-img-portrait{aspect-ratio:3/4;}
 .wk-img-landscape{aspect-ratio:16/9;}
+.wk-img-qvou-titan img{object-fit:contain;background:#5c5c5c;}
+.wk-img-hair-card img{object-fit:contain;background:#697786;}
 .wk-img-hero .iw,.wk-img-detail .iw,.wk-img-validation .iw,.wk-img-portrait .iw,.wk-img-landscape .iw{height:100%;min-height:0;}
 
 /* Study info */
