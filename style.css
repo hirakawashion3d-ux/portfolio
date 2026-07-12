@@ -297,6 +297,7 @@ a{text-decoration:none;color:inherit;}
 .wk-study-summary{font-size:9px;color:var(--text);line-height:1.9;}
 .wk-imgs-aww + .wk-study-info .wk-study-desc{display:none;}
 .wk-imgs-qvou + .wk-study-info .wk-study-desc{display:none;}
+.wk-imgs-single + .wk-study-info .wk-study-desc{display:none;}
 .wk-study-tools{font-size:7px;color:var(--dim);letter-spacing:.08em;}
 
 /* RESEARCH */
