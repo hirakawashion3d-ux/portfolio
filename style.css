@@ -294,6 +294,8 @@ a{text-decoration:none;color:inherit;}
 .wk-study-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--white);line-height:1.2;}
 .wk-study-role{font-size:8px;color:var(--mid);font-style:italic;}
 .wk-study-desc{font-size:8px;color:var(--mid);line-height:1.9;}
+.wk-study-summary{font-size:9px;color:var(--text);line-height:1.9;}
+.wk-imgs-aww + .wk-study-info .wk-study-desc{display:none;}
 .wk-study-tools{font-size:7px;color:var(--dim);letter-spacing:.08em;}
 
 /* RESEARCH */
