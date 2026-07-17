@@ -328,8 +328,10 @@ a{text-decoration:none;color:inherit;}
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:320px 1fr;min-height:calc(100vh - var(--nav-h) - var(--tab-h) - 32px);}
 .about-left{border-right:1px solid var(--border);display:flex;flex-direction:column;}
-.about-portrait{height:280px;border-bottom:1px solid var(--border);}
-.about-portrait .iw{height:100%;}
+.about-portrait{height:280px;border-bottom:1px solid var(--border);overflow:hidden;background:radial-gradient(circle at 52% 42%,rgba(184,154,90,.1),transparent 35%),linear-gradient(135deg,#121211,#070707 72%);}
+.about-portrait-mark,.about-tile-mark{height:100%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:.18em;color:rgba(230,225,212,.42);}
+.about-portrait-mark{font-size:68px;}
+.about-tile-mark{font-size:42px;background:radial-gradient(circle at 52% 42%,rgba(184,154,90,.1),transparent 38%),linear-gradient(135deg,#151513,#090909 74%);}
 .about-name-block{padding:24px 28px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--border);}
 .about-name{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--white);font-weight:300;line-height:1;}
 .about-role{font-size:7px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;}
